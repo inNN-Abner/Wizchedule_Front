@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Wizchedule_Front",
+    "slug": "Wizchedule_Front",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Logo_Wizchedule.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/Logo_Wizchedule.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#14142c"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Logo_Wizchedule.png",
+        "backgroundColor": "#14142c"
+      }
+    },
+    "web": {
+      "favicon": "./assets/Logo_Wizchedule.png"
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}
