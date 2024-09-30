@@ -9,7 +9,7 @@ interface WindowsProps {
     bdrd?: string
     bdrdBL?: string
     bdrdBR?: string
-    children?: string
+    children?: React.ReactNode
 }
 
 export const Windows = ({ bg, mgtop, wdt, hgt, bdrd, bdrdBL, bdrdBR, children }: WindowsProps) => {

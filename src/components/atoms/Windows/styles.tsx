@@ -7,6 +7,6 @@ export const DefineWindow = styled.View
   border-bottom-right-radius: ${({ bdrdBR, theme }) => theme.metrics.px([bdrdBR || 20])}px;
   marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 10])}px;  
   background-color: ${({ bg, theme }) => theme.colors[bg || 'white']};
-  width: ${({ wdt }) => (wdt ? (wdt) : '80%')};
-  height: ${({ hgt }) => (hgt ? (hgt) : '60%')};
+  width: ${({ wdt }) => (wdt ? (wdt) : '90%')};
+  height: ${({ hgt }) => (hgt ? (hgt) : '80%')};
 `

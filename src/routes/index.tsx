@@ -61,7 +61,6 @@ const BottomRoute = () => {
     )
 }
 
-
 export const Routes = () => {
     const Stack = createStackNavigator()
 

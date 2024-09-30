@@ -1,17 +1,17 @@
 import styled from 'styled-components/native'
 
 export const InputText = styled.TextInput
-    <{ color?: string; mgtop?: string; mgleft?: string }>`
-    height: 50;
-    width: 300;
+    <{ color?: string; mgtop?: string; mgleft?: string; bgColor?: string; wdt?: string; hgt?: string }>`
     borderRadius: 20px;
-    borderWidth: 1;
+    borderWidth: 0;
     paddingLeft:20px;
+    elevation: 15;
     marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 20])}px;
     marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 10])}px;
-    color: ${({ color, theme }) => color || theme.colors.darkBlue };
-    backgroundColor: ${({ color, theme }) => color || theme.colors.white };
-    placeholderTextColor: ${({ color, theme }) => color || theme.colors.darkBlue };
+    color: ${({ color, theme }) => theme.colors[color || 'darkBlue']};
+    backgroundColor: ${({ bgColor, theme }) => theme.colors[bgColor || 'white']};
+    width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '300px')};
+    height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '50px')};
 `
 
 export const InputPassword = styled.TextInput
