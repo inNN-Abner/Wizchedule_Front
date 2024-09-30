@@ -9,9 +9,24 @@ interface InputProps {
     keyboardType?: string
     secureTextEntry?: boolean
     mgtop?: string
+    mgleft?: string
 }
 
-export const TextInput = ({placeholder, mgtop}: InputProps) => {
+export const TextInput = ({ placeholder, mgtop, mgleft,  }: InputProps) => {
+  const [text, onChangeText] = React.useState('')
+
+  return (
+      <InputText
+        placeholder={placeholder}
+        onChangeText={onChangeText}
+        keyboardType={'default'}
+        mgtop={mgtop}
+        mgleft={mgleft}
+      ></InputText>
+  )
+}
+
+export const EmailInput = ({ placeholder, mgtop, mgleft,  }: InputProps) => {
   const [text, onChangeText] = React.useState('')
 
   return (
@@ -20,6 +35,7 @@ export const TextInput = ({placeholder, mgtop}: InputProps) => {
         onChangeText={onChangeText}
         keyboardType={'email-address'}
         mgtop={mgtop}
+        mgleft={mgleft}
       ></InputText>
   )
 }

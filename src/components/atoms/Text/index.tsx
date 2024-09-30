@@ -9,13 +9,19 @@ interface TextProps {
     alignSelf?: string
     ftSz?: string
     ftWgt?: string
+    ftype?: string
+    mgleft?: string
 }
 
 //Componente genérico de texto
-export const LoginText = ({ children, mgtop }: TextProps) => {
+export const LoginText = ({ children, mgtop, ftype, color, ftSz, mgleft }: TextProps) => {
     return (
         <TitleText
-        mgtop={mgtop}>
+        mgtop={mgtop}
+        ftype={ftype}
+        color={color}
+        ftSz={ftSz}
+        mgleft={mgleft}>
             {children}
         </TitleText>
     )

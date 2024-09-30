@@ -22,7 +22,7 @@ export const Headers = ({ bg, wdt, hgt }: HeaderProps) => {
             <PersonalIcon
                 source={Wizard}
                 wdt='45'
-                hgt='45'           
+                hgt='45'    
             />
 
             <WhiteHeaderContainer
@@ -31,7 +31,7 @@ export const Headers = ({ bg, wdt, hgt }: HeaderProps) => {
                 hgt={'20'}
                 dir={'column'}
             >
-                <HeaderTexts ftSz='12' ftWgt='bold' mgtop='-8' alignSelf='flex-start'>Henrique Oleiro</HeaderTexts>
+                <HeaderTexts ftSz='14' ftWgt='bold' mgtop='-8' alignSelf='flex-start'>Henrique Oleiro</HeaderTexts>
                 <HeaderTexts ftSz='10' mgtop='0' alignSelf='flex-start' >Wizard - Nível 7</HeaderTexts>
             </WhiteHeaderContainer>
             
@@ -39,7 +39,7 @@ export const Headers = ({ bg, wdt, hgt }: HeaderProps) => {
                 source={WhiteWizard}
                 wdt='45'
                 hgt='45'
-                mgTop='10'
+                mgTop='15'
             />
 
         </WhiteHeaderContainer>

@@ -2,6 +2,7 @@ import styled from 'styled-components/native'
 
 export const Container = styled.View
     <{ dir?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string }>`
+    flex: 1;
     display: flex;
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'}; 
@@ -13,6 +14,7 @@ export const Container = styled.View
 
 export const SubContainer = styled.View
     <{ dir?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string }>`
+    flex: 1;
     display: flex;
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'}; 
