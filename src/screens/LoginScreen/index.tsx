@@ -30,8 +30,9 @@ export const LoginScreen = ({ navigation }) => {
         
         <SubContainer align='center'>
 
-          <StylezedButton label='ENTRAR' color='white' mgtop='30'
+          <StylezedButton label='ENTRAR' color='white' mgtop='30'        
           onPress={() => navigation.navigate('Home')}></StylezedButton>
+          
           <StylezedButton label='CADASTRAR' bg='white' color='darkRed' mgtop='10'></StylezedButton>
           <StylezedButton label='Esqueci a senha' bg='darkBlue' color='white' mgtop='50'></StylezedButton>
 
