@@ -1,10 +1,10 @@
-import { LoginText, Page , Container  } from '../../components'
+import { GenericText, HeaderPage , Container  } from '../../components'
 
 export const PerfilScreen = () => {
   return (
     <Container align='center'>
-      <Page />
-      <LoginText>Perfil</LoginText>
+      <HeaderPage />
+      <GenericText>Perfil</GenericText>
     </Container>
   )
 }

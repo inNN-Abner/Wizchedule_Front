@@ -4,21 +4,22 @@ import { theme } from '../../../styles';
 
 //Criando interface
 interface InputProps {
+    value?: string
     placeholder: string
     color: string
     bgColor?: string
-    onChangeText?: (text: string) => void
-    keyboardType?: string
-    secureTextEntry?: boolean
     mgtop?: string
     mgleft?: string
     wdt?: string
     hgt?: string
+    keyboardType?: string
+    secureTextEntry?: boolean
+    onChangeText?: (text: string) => void
 }
 
 export const TextInput = ({ placeholder, mgtop, mgleft, color, bgColor, wdt, hgt  }: InputProps) => {
   const [text, onChangeText] = React.useState('')
-
+6
   return (
       <InputText
         placeholder={placeholder}
@@ -31,12 +32,11 @@ export const TextInput = ({ placeholder, mgtop, mgleft, color, bgColor, wdt, hgt
         wdt={wdt}
         hgt={hgt}
         placeholderTextColor={theme.colors.gray} 
-      ></InputText>
+      />
   )
 }
 
-export const EmailInput = ({ placeholder, mgtop, mgleft,  }: InputProps) => {
-  const [text, onChangeText] = React.useState('')
+export const EmailInput = ({ value, placeholder, mgtop, mgleft, onChangeText  }: InputProps) => {
 
   return (
       <InputText
@@ -45,20 +45,21 @@ export const EmailInput = ({ placeholder, mgtop, mgleft,  }: InputProps) => {
         keyboardType={'email-address'}
         mgtop={mgtop}
         mgleft={mgleft}
-      ></InputText>
+        value={value}
+      />
   )
 }
 
-export const PasswordInput = ({placeholder, mgtop, secureTextEntry=true}: InputProps) => {
-    const [password, setPassword] = React.useState('')
+export const PasswordInput = ({ value, placeholder, mgtop, onChangeText, secureTextEntry=true }: InputProps) => {
   
     return (
         <InputPassword
           placeholder={placeholder}
-          onChangeText={text => setPassword(text)}
+          onChangeText={onChangeText}
           keyboardType={'default'}
           secureTextEntry={secureTextEntry}
           mgtop={mgtop}
+          value={value}
         ></InputPassword>
     )
   }

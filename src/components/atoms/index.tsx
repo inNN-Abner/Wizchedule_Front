@@ -16,8 +16,14 @@ export * from './Container'
 //Exportar tudo que está dentro de 'PersonalIcon'
 export * from './PersonalIcon'
 
+//Exportar tudo que está dentro de 'Photo'
+export * from './Photo'
+
 //Exportar tudo que está dentro de 'Windows'
 export * from './Windows'
+
+//Exportar tudo que está dentro de 'ReportErrors'
+export * from './ReportErrors'
 
 //Exportar tudo que está dentro de 'Header'
 export * from '../organism/Header'

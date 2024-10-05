@@ -1,19 +1,18 @@
-import React from 'react'
 import { Keyboard, TouchableWithoutFeedback  } from 'react-native'
-import { GenericText, Windows, Container, SubContainer, TextInput, HeaderPage, ListOfContacts  } from '../../components'
+import { GenericText, Windows, Container, SubContainer, TextInput, HeaderPage  } from '../../components'
 
-export const ContactsScreen = () => {
+export const ContactsDetail = () => {
   return (
     
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <Container align='flex-start' style={{ flex: 1 }}>
 
       <HeaderPage />
-      <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>Contatos</GenericText>
-      <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Lista de professores</GenericText>
+      <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>TESTE</GenericText>
+      <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Testando</GenericText>
 
-      <SubContainer align='center' maxhgt='85'>
-        
+      <SubContainer align='center'>
+
         <Windows
         mgtop='30'
         bg='darkGrayII'
@@ -35,10 +34,6 @@ export const ContactsScreen = () => {
             hgt='40'
             />
           </Windows>
-
-          <ListOfContacts></ListOfContacts>
-
-
         </Windows>
       </SubContainer>
 

@@ -23,21 +23,21 @@ const routeIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
 
 const BottomRoute = () => {
     const Tab = createBottomTabNavigator()
-    const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+    const [isKeyboardVisible, setKeyboardVisible] = useState(false)
 
     useEffect(() => {
         const keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', () => {
-            setKeyboardVisible(true);
-        });
+            setKeyboardVisible(true)
+        })
         const keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', () => {
-            setKeyboardVisible(false);
-        });
+            setKeyboardVisible(false)
+        })
 
         return () => {
-            keyboardDidHideListener.remove();
-            keyboardDidShowListener.remove();
-        };
-    }, []);
+            keyboardDidHideListener.remove()
+            keyboardDidShowListener.remove()
+        }
+    }, [])
     
     return (
         <Tab.Navigator  
@@ -69,6 +69,8 @@ export const Routes = () => {
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name='Login' component={LoginScreen} />
                 <Stack.Screen name='Home' component={BottomRoute} />
+                <Stack.Screen name='ContactsDetail' component={ContactsScreen}></Stack.Screen>
+
             </Stack.Navigator>
         </NavigationContainer>
     )

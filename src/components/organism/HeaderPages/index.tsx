@@ -1,9 +1,9 @@
 import React from 'react'
-import { HeaderContainer, HeaderElements } from './styles'
+import { HeaderContainer } from './styles'
 import { Headers } from '../../atoms'
 
 //Componente do Header
-export const Page = () => {
+export const HeaderPage = () => {
     return (
 
     <HeaderContainer>
