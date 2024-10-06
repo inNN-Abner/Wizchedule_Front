@@ -12,11 +12,12 @@ export const ContactsScreen = ({ navigation }) => {
       <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>Contatos</GenericText>
       <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Lista de professores</GenericText>
 
-      <SubContainer align='center' maxhgt='85'>
+      <SubContainer align='center' maxhgt='85' mgleft='0'>
         
         <Windows
         mgtop='30'
         bg='darkGrayII'
+        dir='column'
         >
           <Windows
           mgtop='0'
@@ -24,6 +25,8 @@ export const ContactsScreen = ({ navigation }) => {
           hgt='60'
           bdrdBL='0'
           bdrdBR='0'
+          bg='white'
+          dir='column'
           >
             <TextInput
             mgtop='8'
@@ -38,8 +41,8 @@ export const ContactsScreen = ({ navigation }) => {
 
           <ListOfContacts navigation={navigation}></ListOfContacts>
 
-
         </Windows>
+
       </SubContainer>
 
       </Container>
