@@ -22,7 +22,7 @@ export const TitleInput = styled.Text
 `
 
 export const HeaderText = styled.Text
-  <{ color?: string; cor?: string; mgtop?: string; alignSelf?: string; ftSz?: string; ftWgt?: string; ftype?: string }>`
+  <{ mgleft?: string; wdt?: string; color?: string; cor?: string; mgtop?: string; alignSelf?: string; ftSz?: string; ftWgt?: string; ftype?: string }>`
   paddingLeft: 10px;
   font-family: ${({ ftype, theme }) => theme.fonts[ftype || 'regular']};
   font-weight: ${({ ftWgt }) => ftWgt || 'normal' };
@@ -30,7 +30,8 @@ export const HeaderText = styled.Text
   align-alignSelf: ${({ alignSelf }) => alignSelf || 'flex-start'};
   color: ${({ color, theme }) => theme.colors[color || 'darkBlue']};
   marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 5])}px;
-  width: 225%;
+  marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 0])}px;
+  width: ${({ wdt }) => [wdt || '225%']};
 `
 
 export const ContactNameText = styled.Text

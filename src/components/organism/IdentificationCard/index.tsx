@@ -1,13 +1,14 @@
-import { Windows, Container, SubContainer, ContactInfo, ContactName  } from '../../../components'
+import { Windows, Container, SubContainer, ContactInfo, ContactName, ListContainer  } from '../../../components'
 import Wizard from '../../../../assets/Icon_2.png'
 import { ItemPhoto } from '../../../components/atoms/Photo/styles'
 
-export const IdentificationCard = () => {
-    return (
-    <Container align='center'>
+interface IdCardProps {
+    children?: React.ReactNode
+}
 
+export const IdentificationCard = ({ children }: IdCardProps) => {
+    return (
         <Windows
-            mgtop='15'
             hgt='150'
             align='center'
             >
@@ -18,7 +19,7 @@ export const IdentificationCard = () => {
                 bdrd='20'
                 />
             
-            <SubContainer mgleft='5' hgt='120' wdt='240' align='left' justify='center' bg='white'>
+            <SubContainer mgleft='5' hgt='120' wdt='205' align='left' justify='center' bg='white'>
 
                 <ContactInfo color='darkBlue' ftSz='12' ftWgt='bold'>Nome do professor(a)</ContactInfo>
                 <ContactName color='darkGrayII' children={'Albus Dumbledore'} ftWgt='normal' mgtop='-3' ></ContactName>
@@ -36,7 +37,5 @@ export const IdentificationCard = () => {
 
 
         </Windows>
-
-    </Container>
     )
 }

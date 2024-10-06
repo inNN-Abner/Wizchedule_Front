@@ -4,6 +4,7 @@ import { TitleText, TitleInput, HeaderText, ContactInfoText, ContactNameText } f
 //Criando interface
 interface TextProps {
     children: string
+    wdt?: string
     color?: string
     alignSelf?: string
     ftSz?: string
@@ -39,14 +40,16 @@ export const SubtitleText = ({ children, mgtop, alignSelf }: TextProps) => {
 }
 
 //Componente genérico de título
-export const HeaderTexts = ({ children, mgtop, alignSelf, ftSz, ftWgt, color }: TextProps) => {
+export const HeaderTexts = ({ children, wdt, mgleft, mgtop, alignSelf, ftSz, ftWgt, color }: TextProps) => {
     return (
         <HeaderText
         mgtop={mgtop}
+        mgleft={mgleft}
         alignSelf={alignSelf}
         ftSz={ftSz}
         ftWgt={ftWgt}
         color={color}
+        wdt={wdt}
         > {children}
         </HeaderText>
     )
