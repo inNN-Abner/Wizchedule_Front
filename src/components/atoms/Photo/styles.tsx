@@ -1,8 +1,8 @@
 import styled from 'styled-components/native'
 
 export const ItemPhoto = styled.Image
-<{ source?: string; mgtop?: string; mgleft?: string; wdt?: string; hgt?: string; dir?: string }>`
-    border-radius: 100px;
+<{ align?: string; source?: string; mgtop?: string; mgleft?: string; wdt?: string; hgt?: string; dir?: string; bdrd?: string }>`
+    border-radius: ${({ theme, bdrd }) => (bdrd ? `${theme.metrics.px(bdrd)}px` : `${theme.metrics.px(100)}px`)};
     source: ${({ source }) => source || 'Wizard'};
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : `${theme.metrics.px(50)}px`)};
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` :  `${theme.metrics.px(50)}px`)};

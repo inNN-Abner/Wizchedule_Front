@@ -1,6 +1,6 @@
 import React from 'react'
 import { ListContainer, ContactPhoto, ContactName, ContactInfo, SubContainer } from '../../atoms'
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
+import { ScrollView, TouchableOpacity } from 'react-native'
 import contacts from '../../../../contacts'
 import { FlatList } from 'react-native'
 
@@ -16,12 +16,12 @@ export const ListOfContacts = ({ navigation }) => {
                         source={item.photo}/>
 
                         <SubContainer
+                        mgleft='0'
                         bg='white'
                         justify='center'
                         hgt='48'
                         wdt='250'
                         >
-                            
                             <ContactName
                             color='darkBlue'
                             >{item.name}
