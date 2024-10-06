@@ -1,16 +1,15 @@
 import React from 'react'
 import { ListContainer, ContactPhoto, ContactName, ContactInfo, SubContainer } from '../../atoms'
-import AlbusDumbledore from '../../../../assets/Icon_2.png'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
-import contacts from '../../../../contacts.tsx'
+import contacts from '../../../../contacts'
 import { FlatList } from 'react-native'
 
-export const ListOfContacts = () => {
+export const ListOfContacts = ({ navigation }) => {
     return (       
         <ScrollView>
-        <FlatList data={contacts} renderItem={({index, item}) => (
+        <FlatList data={ contacts } renderItem={({ index, item }) => (
         
-            <TouchableOpacity >
+            <TouchableOpacity onPress={() => {navigation.navigate('ContactsDetail')}}>
                 <ListContainer>
                     
                     <ContactPhoto

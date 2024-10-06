@@ -3,7 +3,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { LoginScreen, HomeScreen, SchedulingScreen, ContactsScreen, PerfilScreen } from '../screens'
+import { LoginScreen, HomeScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen } from '../screens'
 import { theme } from '../styles/theme'
 import { Keyboard } from 'react-native'
 
@@ -56,7 +56,8 @@ const BottomRoute = () => {
             <Tab.Screen name='Agendamentos' component={SchedulingScreen} />
             <Tab.Screen name='Contatos' component={ContactsScreen} />
             <Tab.Screen name='Perfil' component={PerfilScreen} />
-        
+            <Tab.Screen name='ContactsDetail' component={ContactsDetailScreen} options={{ tabBarButton: () => null}} />
+                
         </Tab.Navigator>
     )
 }
@@ -69,8 +70,6 @@ export const Routes = () => {
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name='Login' component={LoginScreen} />
                 <Stack.Screen name='Home' component={BottomRoute} />
-                <Stack.Screen name='ContactsDetail' component={ContactsScreen}></Stack.Screen>
-
             </Stack.Navigator>
         </NavigationContainer>
     )

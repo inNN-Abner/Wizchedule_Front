@@ -1,7 +1,7 @@
 import { Keyboard, TouchableWithoutFeedback  } from 'react-native'
 import { GenericText, Windows, Container, SubContainer, TextInput, HeaderPage  } from '../../components'
 
-export const ContactsDetail = () => {
+export const ContactsDetailScreen = () => {
   return (
     
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>

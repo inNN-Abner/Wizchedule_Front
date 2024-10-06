@@ -2,7 +2,7 @@ import React from 'react'
 import { Keyboard, TouchableWithoutFeedback  } from 'react-native'
 import { GenericText, Windows, Container, SubContainer, TextInput, HeaderPage, ListOfContacts  } from '../../components'
 
-export const ContactsScreen = () => {
+export const ContactsScreen = ({ navigation }) => {
   return (
     
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -36,7 +36,7 @@ export const ContactsScreen = () => {
             />
           </Windows>
 
-          <ListOfContacts></ListOfContacts>
+          <ListOfContacts navigation={navigation}></ListOfContacts>
 
 
         </Windows>
