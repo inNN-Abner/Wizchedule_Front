@@ -9,3 +9,6 @@ export * from './organism/IdentificationCard'
 
 //Exportar tudo que está dentro de 'List'
 export * from './organism/List'
+
+//Exportar tudo que está dentro de 'PerfilGrid'
+export * from './organism/PerfilGrid'

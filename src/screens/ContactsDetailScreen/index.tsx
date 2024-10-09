@@ -1,4 +1,5 @@
-import { GenericText, Container, HeaderPage, IdentificationCard, Windows, SubContainer, SubtitleText, HeaderTexts  } from '../../components'
+import { GenericText, Container, HeaderPage, IdentificationCard, Windows, SubContainer, SubtitleText, HeaderTexts, PerfilGrid  } from '../../components'
+import { PerfilGridSkeleton } from '../../components/molecules'
 
 
 export const ContactsDetailScreen = () => {
@@ -27,8 +28,10 @@ export const ContactsDetailScreen = () => {
           wdt='100%'
           >Horários do professor</HeaderTexts>
 
+        <PerfilGrid />
+
         </Windows>
-        
+
       </SubContainer>
 
     </Container>
