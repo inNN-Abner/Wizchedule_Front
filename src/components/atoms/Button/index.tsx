@@ -1,6 +1,8 @@
 import React from 'react';
 import { ButtonText, StyledButton } from './styles'
-import Ionicons from '@expo/vector-icons/Ionicons';
+import FontAwesome from '@expo/vector-icons/FontAwesome'
+import Fontisto from '@expo/vector-icons/Fontisto'
+import { Ionicons } from '@expo/vector-icons'
 
 //Criando interface
 interface ButtonProps {
@@ -31,7 +33,7 @@ export const StylezedButton = ({ label, color, bg, mgtop, onPress }: ButtonProps
     )
 }
 
-export const EditButton = ({ bg, wdt, hgt, bdrd, children, mgleft, mgtop, onPress }: ButtonProps ) => {
+export const EditButton = ({ bg, wdt, hgt, bdrd, mgleft, mgtop, onPress }: ButtonProps ) => {
     return (
     <StyledButton
         bg={bg}
@@ -41,6 +43,34 @@ export const EditButton = ({ bg, wdt, hgt, bdrd, children, mgleft, mgtop, onPres
         mgleft={mgleft}
         mgtop={mgtop}
         onPress={onPress}>
-    {children}</StyledButton>
+    <FontAwesome name="pencil" size={24} color="black" /></StyledButton>
+    )
+}
+
+export const TrashButton = ({ bg, wdt, hgt, bdrd, mgleft, mgtop, onPress }: ButtonProps ) => {
+    return (
+    <StyledButton
+        bg={bg}
+        wdt={wdt}
+        hgt={hgt}
+        bdrd={bdrd}
+        mgleft={mgleft}
+        mgtop={mgtop}
+        onPress={onPress}>
+     <Fontisto name="trash" size={24} color="white" /></StyledButton>
+    )
+}
+
+export const AddButton = ({ bg, wdt, hgt, bdrd, mgleft, mgtop, onPress }: ButtonProps ) => {
+    return (
+    <StyledButton
+        bg={bg}
+        wdt={wdt}
+        hgt={hgt}
+        bdrd={bdrd}
+        mgleft={mgleft}
+        mgtop={mgtop}
+        onPress={onPress}>
+        <Ionicons name="add-circle" size={24} color="white" /></StyledButton>
     )
 }
