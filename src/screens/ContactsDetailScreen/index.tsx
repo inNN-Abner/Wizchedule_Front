@@ -1,8 +1,9 @@
-import { GenericText, Container, HeaderPage, IdentificationCard, Windows, SubContainer, SubtitleText, HeaderTexts, PerfilGrid  } from '../../components'
-import { PerfilGridSkeleton } from '../../components/molecules'
+import { GenericText, Container, HeaderPage, IdentificationCard, Windows, SubContainer, HeaderTexts, PerfilGrid  } from '../../components'
 
+export const ContactsDetailScreen = ({ route }) => {
 
-export const ContactsDetailScreen = () => {
+  const { id, name, info, photo, registration, account } = route.params
+
   return (
     <Container align='flex-start'>
 
@@ -18,7 +19,7 @@ export const ContactsDetailScreen = () => {
         justify='flex-start'
         dir='column'
         >
-          <IdentificationCard />
+          <IdentificationCard route={route} />
 
           <HeaderTexts
           mgtop='5'

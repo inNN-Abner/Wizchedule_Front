@@ -1,7 +1,7 @@
 import React from 'react'
 import { HeaderPage , Container, IdentificationCard, GenericText, SubContainer  } from '../../components'
 
-export const PerfilScreen = () => {
+export const PerfilScreen = ({ route }) => {
   return (
     <Container align='flex-start' style={{ flex: 1 }}>
 
@@ -11,7 +11,7 @@ export const PerfilScreen = () => {
         <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Trocar o modelo do Header</GenericText>
 
         <SubContainer align='center' mgleft='0'>
-          <IdentificationCard />
+          <IdentificationCard route={route}  />
         </SubContainer>
     </Container>
   )

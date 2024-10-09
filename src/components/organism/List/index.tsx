@@ -9,7 +9,15 @@ export const ListOfContacts = ({ navigation }) => {
         <ScrollView>
         <FlatList data={ contacts } renderItem={({ index, item }) => (
         
-            <TouchableOpacity onPress={() => {navigation.navigate('ContactsDetail')}}>
+            <TouchableOpacity onPress={() => {navigation.navigate('ContactsDetail', {
+                id: item.id,
+                name: item.name,
+                email: item.email,
+                info: item.info,
+                photo: item.photo,
+                account: item.account,
+                registration: item.registration
+            })}}>
                 <ListContainer>
                     
                     <ContactPhoto
