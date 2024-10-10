@@ -67,7 +67,10 @@ export const PerfilGrid = ({ navigation }) => {
             bdrd='10'
             mgtop='3'
             mgleft='5'
-            bg='darkRed' />
+            bg='darkRed'
+            onPress={() => {
+                navigation.navigate('AddSchedule')
+            }} />
         </ListContainer>
     </> 
     )

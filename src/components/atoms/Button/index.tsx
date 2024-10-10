@@ -19,11 +19,14 @@ interface ButtonProps {
     children?: React.ReactNode
 }
 
-export const StylezedButton = ({ label, color, bg, mgtop, onPress }: ButtonProps ) => {
+export const StylezedButton = ({ bdrd, hgt, wdt, label, color, bg, mgtop, onPress }: ButtonProps ) => {
     return (
     <StyledButton 
         bg={bg}
         mgtop={mgtop}
+        hgt={hgt}
+        wdt={wdt}
+        bdrd={bdrd}
         onPress={onPress}>
             <ButtonText
                 color={color}>
@@ -32,6 +35,24 @@ export const StylezedButton = ({ label, color, bg, mgtop, onPress }: ButtonProps
     </StyledButton>
     )
 }
+
+export const DayButton = ({ hgt, label, color, bg, onPress }: ButtonProps ) => {
+    return (
+    <StyledButton 
+        bdrd={'5'}
+        wdt={'53'}
+        hgt={hgt}
+        mgtop={'0'}
+        bg={'white'}
+        onPress={onPress}>
+            <ButtonText
+                color={color}>
+                {label}
+            </ButtonText>
+    </StyledButton>
+    )
+}
+
 
 export const EditButton = ({ bg, wdt, hgt, bdrd, mgleft, mgtop, onPress }: ButtonProps ) => {
     return (

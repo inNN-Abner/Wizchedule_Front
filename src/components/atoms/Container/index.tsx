@@ -13,7 +13,7 @@ export const Container = styled.SafeAreaView
 `
 
 export const SubContainer = styled.SafeAreaView
-    <{ mgleft?: string; bdrd?: string; dir?: string; flex?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string; maxhgt?: string }>`
+    <{ mgleft?: string; mgtop?: string; bdrd?: string; dir?: string; flex?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string; maxhgt?: string }>`
     display: flex;
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'};
@@ -23,6 +23,7 @@ export const SubContainer = styled.SafeAreaView
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '100%')};
     max-height: ${({ maxhgt }) => (maxhgt ? `${(maxhgt)}%` : '100%')};
     marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 10])}px;
+    marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 0])}px;
 `
 
 export const ListContainer = styled.SafeAreaView
@@ -37,4 +38,19 @@ export const ListContainer = styled.SafeAreaView
     backgroundColor: ${({ bg, theme }) => theme.colors[bg || 'white']};
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '330px')};
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '60px')};
+`
+
+export const SelectDay = styled.SafeAreaView
+ <{ justify?: string; color?: string; align?: string; dir?: string; mgtop?: string; mgleft?: string; bg?: string; wdt?: string; hgt?: string}>`
+    display: flex;
+    border-radius: 10px;
+    flexDirection: ${({ dir }) => dir || 'row'};
+    justifyContent: ${({ justify }) => justify || 'center'};
+    align-items: ${({ align }) => align || 'center'}; 
+    marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 20])}px;
+    marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 0])}px;
+    backgroundColor: ${({ bg, theme }) => theme.colors[bg || 'white']};
+    color: ${({ color, theme }) => color || theme.colors.darkBlue };
+    width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '85%')};
+    height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '50px')};
 `

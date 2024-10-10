@@ -12,6 +12,7 @@ interface TextProps {
     ftype?: string
     mgtop?: string
     mgleft?: string
+    pddleft?: string
 }
 
 //Componente genérico de texto
@@ -29,10 +30,14 @@ export const GenericText = ({ children, mgtop, ftype, color, ftSz, mgleft }: Tex
 }
 
 //Componente genérico de subtitle
-export const SubtitleText = ({ children, mgtop, alignSelf }: TextProps) => {
+export const SubtitleText = ({ pddleft, mgleft, ftSz, color, children, mgtop, alignSelf }: TextProps) => {
     return (
         <TitleInput
+        ftSz={ftSz}
+        color={color}
         mgtop={mgtop}
+        mgleft={mgleft}
+        pddleft={pddleft}
         alignSelf={alignSelf}
         > {children}
         </TitleInput>

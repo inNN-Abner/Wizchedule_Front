@@ -10,5 +10,14 @@ export * from './organism/IdentificationCard'
 //Exportar tudo que está dentro de 'List'
 export * from './organism/List'
 
+//Exportar tudo que está dentro de 'SelectDay'
+export * from './organism/SelectDay'
+
+//Exportar tudo que está dentro de 'ClassModality'
+export * from './organism/ClassModality'
+
+//Exportar tudo que está dentro de 'TimeInput'
+export * from './organism/TimeInput'
+
 //Exportar tudo que está dentro de 'PerfilGrid'
 export * from './organism/PerfilGrid'

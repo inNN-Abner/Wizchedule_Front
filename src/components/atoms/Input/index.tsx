@@ -10,6 +10,7 @@ interface InputProps {
     bgColor?: string
     mgtop?: string
     mgleft?: string
+    pddlft?: string
     wdt?: string
     hgt?: string
     keyboardType?: string
@@ -19,7 +20,7 @@ interface InputProps {
 
 export const TextInput = ({ placeholder, mgtop, mgleft, color, bgColor, wdt, hgt  }: InputProps) => {
   const [text, onChangeText] = React.useState('')
-6
+
   return (
       <InputText
         placeholder={placeholder}
@@ -63,3 +64,21 @@ export const PasswordInput = ({ value, placeholder, mgtop, onChangeText, secureT
         ></InputPassword>
     )
   }
+
+  export const TimeInput = ({ pddlft, wdt, hgt, value, placeholder, mgtop, mgleft, onChangeText  }: InputProps) => {
+
+  return (
+    <InputText
+    wdt={wdt}
+    hgt={hgt}
+    pddlft={pddlft}
+    placeholder={placeholder}
+    onChangeText={onChangeText}
+    keyboardType={'numeric'}
+    mgtop={mgtop}
+    mgleft={mgleft}
+    value={value}
+    textAlign={'center'}
+  />
+  )
+}

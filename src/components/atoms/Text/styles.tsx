@@ -11,14 +11,15 @@ export const TitleText = styled.Text
 `
 
 export const TitleInput = styled.Text
-  <{ color?: string; mgtop?: string; alignSelf?: string; ftype?: string; ftSz?: string }>`
+  <{ color?: string; pddleft?: string; mgleft?: string; mgtop?: string; alignSelf?: string; ftype?: string; ftSz?: string }>`
   font-family: ${({ ftype, theme }) => theme.fonts[ftype || 'regular']};
   font-weight: bold;
-  paddingLeft: 70px;
   align-alignSelf: ${({ alignSelf }) => alignSelf || 'flex-start'};
   font-size: ${({ theme, ftSz }) => (ftSz ? `${theme.metrics.px(ftSz)}px` : `${theme.metrics.px(22)}px`)};
   color: ${({ color, theme }) => color || theme.colors.lightGray };
+  paddingLeft: ${({ pddleft, theme }) => theme.metrics.px([pddleft || 70])}px;
   marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 10])}px;
+  marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 0])}px;
 `
 
 export const HeaderText = styled.Text
