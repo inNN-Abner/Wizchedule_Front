@@ -3,7 +3,7 @@ import { ItemPhoto } from '../../../components/atoms/Photo/styles'
 
 export const IdentificationCard = ({ route }) => {
     
-    const { id, name, info, photo, registration, account, email } = route.params
+    const { name, photo, registration, account, email } = route.params
 
     return (
         <Windows

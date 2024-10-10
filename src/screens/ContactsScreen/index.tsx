@@ -39,7 +39,7 @@ export const ContactsScreen = ({ navigation }) => {
             />
           </Windows>
 
-          <ListOfContacts navigation={navigation}></ListOfContacts>
+          <ListOfContacts navigation={navigation} />
 
         </Windows>
 

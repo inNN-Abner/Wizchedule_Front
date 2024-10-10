@@ -1,8 +1,6 @@
 import { GenericText, Container, HeaderPage, IdentificationCard, Windows, SubContainer, HeaderTexts, PerfilGrid  } from '../../components'
 
-export const ContactsDetailScreen = ({ route }) => {
-
-  const { id, name, info, photo, registration, account } = route.params
+export const ContactsDetailScreen = ({ route, navigation }) => {
 
   return (
     <Container align='flex-start'>
@@ -29,7 +27,7 @@ export const ContactsDetailScreen = ({ route }) => {
           wdt='100%'
           >Horários do professor</HeaderTexts>
 
-        <PerfilGrid />
+        <PerfilGrid navigation={navigation} />
 
         </Windows>
 

@@ -10,7 +10,7 @@ export const DefineWindow = styled.View
   marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 10])}px;  
   background-color: ${({ bg, theme }) => theme.colors[bg || 'white']};
   width: ${({ wdt }) => (wdt ? (wdt) : '90%')};
-  height: ${({ hgt }) => (hgt ? (hgt) : '80%')};
+  height: ${({ hgt }) => (hgt ? (hgt) : '82%')};
   align-items: ${({ align }) => align || 'flex-start'};
   justify-content: ${({ justify }) => justify || 'flex-start'};
 `

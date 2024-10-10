@@ -5,10 +5,10 @@ import { FlatList, Text } from 'react-native'
 import { PerfilGridSkeleton } from '../../molecules'
 
 
-export const PerfilGrid = () => {
+export const PerfilGrid = ({ navigation }) => {
     return (
-        
-    <><FlatList data={horarios} renderItem={({ index, item }) => (
+    <>
+    <FlatList data={ horarios } renderItem={({ index, item }) => (
 
             <ListContainer
                 mgtop='-3'
@@ -21,7 +21,15 @@ export const PerfilGrid = () => {
                 <PerfilGridSkeleton ftSz='14' wdt='140' ftype='regular'>
                     <Text style={{ fontWeight: 'bold' }}>{item.modalidade}</Text> {`\n`} {item.horario}</PerfilGridSkeleton>
 
-                <EditButton
+                <EditButton onPress={() => {
+                    navigation.navigate('AddSchedule', {
+                        id: item.id,
+                        diaSemana: item.diaSemana,
+                        horario: item.horario,
+                        modalidae: item.modalidade
+                    })
+                }}
+
                     label={'Teste'}
                     wdt='45'
                     hgt='50'
@@ -43,7 +51,7 @@ export const PerfilGrid = () => {
         )}
         >
         </FlatList><ListContainer
-            mgtop='-3'
+            mgtop='0'
             mgleft='0'
             bg='darkGrayII'
             dir='row'
@@ -60,6 +68,7 @@ export const PerfilGrid = () => {
             mgtop='3'
             mgleft='5'
             bg='darkRed' />
-        </ListContainer></> 
+        </ListContainer>
+    </> 
     )
 }
