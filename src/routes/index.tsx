@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Ionicons } from '@expo/vector-icons'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
-import { LoginScreen, HomeScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddScheduleScreen } from '../screens'
 import { theme } from '../styles/theme'
 import { Keyboard } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { LoginScreen, HomeScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddScheduleScreen } from '../screens'
 
 interface BottomRoutes{
     Principal: string
@@ -17,7 +17,7 @@ interface BottomRoutes{
 const routeIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
     Principal: 'home',
     Agendamentos: 'calendar',
-    Contatos: 'id-card', //people-circle
+    Contatos: 'id-card',
     Perfil: 'person'
 }
 

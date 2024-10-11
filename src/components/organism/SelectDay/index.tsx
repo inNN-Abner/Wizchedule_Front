@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, SelectDay, DayButton } from '../../atoms'
+import { SelectDay, DayButton } from '../../atoms'
 
 export const SelectDayRow = () => {
     return (

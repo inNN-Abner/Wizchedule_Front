@@ -1,8 +1,7 @@
-import React from 'react';
-import { InputPassword, InputText } from './styles';
-import { theme } from '../../../styles';
+import React from 'react'
+import { theme } from '../../../styles'
+import { InputPassword, InputText } from './styles'
 
-//Criando interface
 interface InputProps {
     value?: string
     placeholder: string

@@ -1,8 +1,8 @@
 import React from 'react'
-import { ListContainer, ContactPhoto, ContactName, ContactInfo, SubContainer } from '../../atoms'
-import { ScrollView, TouchableOpacity } from 'react-native'
 import contacts from '../../../../contacts'
 import { FlatList } from 'react-native'
+import { ScrollView, TouchableOpacity } from 'react-native'
+import { ListContainer, ContactPhoto, ContactName, ContactInfo, SubContainer } from '../../atoms'
 
 export const ListOfContacts = ({ navigation }) => {
     return (       

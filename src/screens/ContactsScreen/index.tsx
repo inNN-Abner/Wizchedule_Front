@@ -9,8 +9,8 @@ export const ContactsScreen = ({ navigation }) => {
       <Container align='flex-start' style={{ flex: 1 }}>
 
       <HeaderPage />
-      <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>Contatos</GenericText>
-      <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Lista de professores</GenericText>
+        <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>Contatos</GenericText>
+        <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Lista de professores</GenericText>
 
       <SubContainer align='center' maxhgt='85' mgleft='0'>
         

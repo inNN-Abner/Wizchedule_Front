@@ -1,10 +1,9 @@
-import React from 'react';
-import { ButtonText, StyledButton } from './styles'
-import FontAwesome from '@expo/vector-icons/FontAwesome'
+import React from 'react'
 import Fontisto from '@expo/vector-icons/Fontisto'
+import FontAwesome from '@expo/vector-icons/FontAwesome'
 import { Ionicons } from '@expo/vector-icons'
+import { ButtonText, StyledButton } from './styles'
 
-//Criando interface
 interface ButtonProps {
     label: string
     onPress?: () => void

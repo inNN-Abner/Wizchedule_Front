@@ -1,7 +1,6 @@
 import React from 'react'
 import { TitleText, TitleInput, HeaderText, ContactInfoText, ContactNameText } from './styles'
 
-//Criando interface
 interface TextProps {
     children: string
     wdt?: string
@@ -15,7 +14,6 @@ interface TextProps {
     pddleft?: string
 }
 
-//Componente genérico de texto
 export const GenericText = ({ children, mgtop, ftype, color, ftSz, mgleft }: TextProps) => {
     return (
         <TitleText
@@ -29,7 +27,6 @@ export const GenericText = ({ children, mgtop, ftype, color, ftSz, mgleft }: Tex
     )
 }
 
-//Componente genérico de subtitle
 export const SubtitleText = ({ pddleft, mgleft, ftSz, color, children, mgtop, alignSelf }: TextProps) => {
     return (
         <TitleInput
@@ -44,7 +41,6 @@ export const SubtitleText = ({ pddleft, mgleft, ftSz, color, children, mgtop, al
     )
 }
 
-//Componente genérico de título
 export const HeaderTexts = ({ children, wdt, mgleft, mgtop, alignSelf, ftSz, ftWgt, color }: TextProps) => {
     return (
         <HeaderText
@@ -60,7 +56,6 @@ export const HeaderTexts = ({ children, wdt, mgleft, mgtop, alignSelf, ftSz, ftW
     )
 }
 
-//Componente genérico de nome de contatos
 export const ContactName = ({ children, color, ftype, ftWgt, ftSz, mgtop, mgleft }: TextProps) => {
     return (
         <ContactNameText
@@ -75,7 +70,6 @@ export const ContactName = ({ children, color, ftype, ftWgt, ftSz, mgtop, mgleft
     )
 }
 
-//Componente genérico de informações de contatos
 export const ContactInfo = ({ children, color, ftype, ftWgt, ftSz, mgtop, mgleft }: TextProps) => {
     return (
         <ContactInfoText

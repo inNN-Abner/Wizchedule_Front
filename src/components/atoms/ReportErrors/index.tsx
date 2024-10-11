@@ -1,7 +1,6 @@
 import React from 'react'
 import { ErrorMessage } from './styles'
 
-//Criando interface
 interface ReportErrorPros {
     children: string
     color?: string
@@ -13,7 +12,6 @@ interface ReportErrorPros {
     jtCt?: string
 }
 
-//Componente genérico de texto
 export const LoginError = ({ children, mgtop, ftype, color, ftSz, jtCt }: ReportErrorPros) => {
     return (
         <ErrorMessage

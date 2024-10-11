@@ -1,9 +1,8 @@
 import React from 'react'
 import horarios from '../../../../horarios'
-import { AddButton, EditButton, ListContainer, TrashButton } from '../../atoms'
 import { FlatList, Text } from 'react-native'
 import { PerfilGridSkeleton } from '../../molecules'
-
+import { AddButton, EditButton, ListContainer, TrashButton } from '../../atoms'
 
 export const PerfilGrid = ({ navigation }) => {
     return (

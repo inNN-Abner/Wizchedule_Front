@@ -1,7 +1,6 @@
 import React from 'react'
 import { Grid } from './styles'
 
-
 interface GridProps {
     bg?: string
     color?: string

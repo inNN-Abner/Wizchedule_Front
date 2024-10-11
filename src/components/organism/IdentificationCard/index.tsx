@@ -1,5 +1,5 @@
-import { Windows, SubContainer, ContactInfo, ContactName  } from '../../../components'
 import { ItemPhoto } from '../../../components/atoms/Photo/styles'
+import { Windows, SubContainer, ContactInfo, ContactName  } from '../../../components'
 
 export const IdentificationCard = ({ route }) => {
     

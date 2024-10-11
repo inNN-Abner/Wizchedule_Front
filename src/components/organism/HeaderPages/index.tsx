@@ -1,8 +1,7 @@
 import React from 'react'
-import { HeaderContainer } from './styles'
 import { Headers } from '../../atoms'
+import { HeaderContainer } from './styles'
 
-//Componente do Header
 export const HeaderPage = () => {
     return (
 

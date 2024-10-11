@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { Dropdown } from 'react-native-element-dropdown';
-import AntDesign from '@expo/vector-icons/AntDesign';
+import React, { useState } from 'react'
+import { StyleSheet, View, Text } from 'react-native'
+import { Dropdown } from 'react-native-element-dropdown'
+import AntDesign from '@expo/vector-icons/AntDesign'
 
 const data = [
   { label: 'Presencial', value: '1' },

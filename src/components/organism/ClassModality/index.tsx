@@ -1,6 +1,6 @@
 import React from 'react'
-import { SubContainer, TimeInput, SubtitleText, Windows, StylezedButton } from '../../../components'
 import DropdownComponent from '../../atoms/Picker'
+import { SubContainer, SubtitleText, Windows } from '../../../components'
 
 export const DefineModality = () => {
   return (

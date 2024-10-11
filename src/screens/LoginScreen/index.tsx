@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { GenericText, Logo, PasswordInput, SubtitleText, StylezedButton, Container, SubContainer, EmailInput, LoginError  } from '../../components'
 import Wizard from '../../../assets/Logo_Wizchedule.png'
 import { Keyboard, TouchableWithoutFeedback } from 'react-native'
+import { GenericText, Logo, PasswordInput, SubtitleText, StylezedButton, Container, SubContainer, EmailInput, LoginError  } from '../../components'
 
 const mockUserTest = {
   email: 'A',
@@ -26,31 +26,32 @@ export const LoginScreen = ({ navigation }) => {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 
       <Container align='center'>
+
         <Logo source={Wizard} />
         <GenericText>WiZcHeduLe</GenericText>
 
         <SubContainer align='center'>
 
           <SubtitleText mgtop='15' alignSelf='flex-start' >E-mail</SubtitleText>
-          <EmailInput
-            placeholder=''
-            color='darkBlue'
-            keyboardType='email-address'
-            mgtop='5'
-            value={emailValue}
-            onChangeText={(text) => setEmailValue(text)}
-          />
+            <EmailInput
+              placeholder=''
+              color='darkBlue'
+              keyboardType='email-address'
+              mgtop='5'
+              value={emailValue}
+              onChangeText={(text) => setEmailValue(text)}
+            />
 
           <SubtitleText mgtop='20' alignSelf='flex-start' >Senha</SubtitleText>
-          <PasswordInput
-            placeholder=''
-            mgtop='5'
-            color='darkBlue'
-            keyboardType='default'
-            secureTextEntry={true}
-            value={passwordValue}
-            onChangeText={(text) => setPasswordValue(text)}
-          />
+            <PasswordInput
+              placeholder=''
+              mgtop='5'
+              color='darkBlue'
+              keyboardType='default'
+              secureTextEntry={true}
+              value={passwordValue}
+              onChangeText={(text) => setPasswordValue(text)}
+            />
           
           <SubContainer align='center'>
 
