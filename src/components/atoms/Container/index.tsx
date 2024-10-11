@@ -54,3 +54,11 @@ export const SelectDay = styled.SafeAreaView
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '85%')};
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '50px')};
 `
+
+export const ModalContainer = styled.SafeAreaView
+ <{ justify?: string; align?: string }>`
+    flex: 1;
+    justifyContent: ${({ justify }) => justify || 'center'};
+    align-items: ${({ align }) => align || 'center'}; 
+    backgroundColor: 'rgba(0, 0, 0, 0.5)';
+`

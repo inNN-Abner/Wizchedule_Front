@@ -21,3 +21,6 @@ export * from './organism/TimeInput'
 
 //Exportar tudo que está dentro de 'PerfilGrid'
 export * from './organism/PerfilGrid'
+
+//Exportar tudo que está dentro de 'CalendarModal'
+export * from './organism/CalendarModal'

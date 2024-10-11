@@ -10,12 +10,14 @@ interface WindowsProps {
     bdrd?: string
     bdrdBL?: string
     bdrdBR?: string
+    bdrdTL?: string
+    bdrdTR?: string
     align?: string
     justify?: string
     children?: React.ReactNode
 }
 
-export const Windows = ({ dir, justify, align, bg, mgtop, wdt, hgt, bdrd, bdrdBL, bdrdBR, children }: WindowsProps) => {
+export const Windows = ({ dir, justify, align, bg, mgtop, wdt, hgt, bdrd, bdrdBL, bdrdBR, bdrdTR, bdrdTL, children }: WindowsProps) => {
     return (
         <DefineWindow
         mgtop={mgtop}
@@ -26,6 +28,8 @@ export const Windows = ({ dir, justify, align, bg, mgtop, wdt, hgt, bdrd, bdrdBL
         bdrd={bdrd}
         bdrdBL={bdrdBL}
         bdrdBR={bdrdBR}
+        bdrdTL={bdrdTL}
+        bdrdTR={bdrdTR}
         align={align}
         justify={justify}
         children={children}
