@@ -1,5 +1,6 @@
 import { Keyboard, TouchableWithoutFeedback } from 'react-native'
-import { GenericText, Container, HeaderPage, SelectDayRow, SubContainer, DefineTime, DefineModality, StylezedButton } from '../../components'
+import { GenericText, Container, HeaderPage, SelectDayRow, SubContainer, DefineTime, DefineModality, StylezedButton, Windows } from '../../components'
+import { ContactInfoText, ContactNameText } from '../../components/atoms/Text/styles'
 
 export const AddScheduleScreen = ({ route, navigation }) => {
 
@@ -14,6 +15,24 @@ export const AddScheduleScreen = ({ route, navigation }) => {
             
             
         <SubContainer align='center' mgleft='0'>
+
+            <Windows
+              wdt='85%'
+              hgt='50'
+              bdrdBL='0'
+              bdrdBR='0'
+              bg='darkRed'
+              mgtop='35'
+              align='center'
+              justify='center'
+            >
+              <ContactInfoText 
+                color='white'
+                ftSz='20' 
+                mgtop='-10'
+                > Selecione um dia 
+              </ContactInfoText>
+            </Windows>
 
             <SelectDayRow />
             

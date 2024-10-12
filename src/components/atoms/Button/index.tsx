@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { ButtonText, StyledButton } from './styles'
 
 interface ButtonProps {
-    label: string
+    label?: string
     onPress?: () => void
     color?: string
     bg?: string
@@ -42,7 +42,7 @@ export const DayButton = ({ hgt, label, color, bg, onPress }: ButtonProps ) => {
         wdt={'53'}
         hgt={hgt}
         mgtop={'0'}
-        bg={'white'}
+        bg={bg}
         onPress={onPress}>
             <ButtonText
                 color={color}>

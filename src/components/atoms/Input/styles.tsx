@@ -1,3 +1,4 @@
+import { TextInputMask } from 'react-native-masked-text';
 import styled from 'styled-components/native'
 
 export const InputText = styled.TextInput
@@ -26,3 +27,17 @@ export const InputPassword = styled.TextInput
     backgroundColor: ${({ color, theme }) => color || theme.colors.white };
     placeholderTextColor: ${({ color, theme }) => color || theme.colors.darkBlue };
 `
+export const TimeInputMask = styled(TextInputMask)
+    <{ color?: string; mgtop?: string; pddlft?: string; mgleft?: string; bgColor?: string; wdt?: string; hgt?: string }>`
+    borderRadius: 20px;
+    borderWidth: 0;
+    elevation: 15;
+    paddingLeft: ${({ pddlft, theme }) => theme.metrics.px([pddlft || 20])}px;
+    marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 20])}px;
+    marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 10])}px;
+    color: ${({ color, theme }) => theme.colors[color || 'darkBlue']};
+    backgroundColor: ${({ bgColor, theme }) => theme.colors[bgColor || 'white']};
+    width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '300px')};
+    height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '50px')};
+`
+

@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SelectDay, DayButton } from '../../atoms'
 
 export const SelectDayRow = () => {
-    return (
-        <SelectDay bg='white' mgtop='50'>
 
-            <DayButton color={'darkBlue'} label={'SEG'}></DayButton>
-            <DayButton color={'darkBlue'} label={'TER'}></DayButton>
-            <DayButton color={'darkBlue'} label={'QUA'}></DayButton>
-            <DayButton color={'darkBlue'} label={'QUI'}></DayButton>
-            <DayButton color={'darkBlue'} label={'SEX'}></DayButton>
-            <DayButton color={'darkBlue'} label={'SAB'}></DayButton>
-        
+    const [indexDate, setIndexDate] = useState<number | null>(null)
+
+    const handleButtonPress = (index: number) => {
+        setIndexDate(index)
+    }
+
+    return (
+
+        <SelectDay bg='white' mgtop='-10' bdrdTL='0' bdrdTR='0'>
+            {['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB'].map((day, index) => (
+                <DayButton 
+                    key={index}
+                    label={day}
+                    color={indexDate === index ? 'white' : 'darkBlue'}
+                    bg={indexDate === index ? 'darkRed' : 'white'}
+                    onPress={() => handleButtonPress(index)}
+                />
+            ))}
         </SelectDay>
     )
 }

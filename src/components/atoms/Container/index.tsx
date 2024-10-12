@@ -41,7 +41,7 @@ export const ListContainer = styled.SafeAreaView
 `
 
 export const SelectDay = styled.SafeAreaView
- <{ justify?: string; color?: string; align?: string; dir?: string; mgtop?: string; mgleft?: string; bg?: string; wdt?: string; hgt?: string}>`
+ <{ justify?: string; bdrdTL?: string; bdrdTR?: string; color?: string; align?: string; dir?: string; mgtop?: string; mgleft?: string; bg?: string; wdt?: string; hgt?: string}>`
     display: flex;
     border-radius: 10px;
     flexDirection: ${({ dir }) => dir || 'row'};
@@ -49,8 +49,10 @@ export const SelectDay = styled.SafeAreaView
     align-items: ${({ align }) => align || 'center'}; 
     marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 20])}px;
     marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 0])}px;
-    backgroundColor: ${({ bg, theme }) => theme.colors[bg || 'white']};
-    color: ${({ color, theme }) => color || theme.colors.darkBlue };
+    border-top-left-radius: ${({ bdrdTL, theme }) => theme.metrics.px([bdrdTL || 20])}px;
+    border-top-right-radius: ${({ bdrdTR, theme }) => theme.metrics.px([bdrdTR || 20])}px;
+    backgroundColor: ${({ bg, theme }) => theme.colors[bg || theme.colors.white]};
+    color: ${({ color, theme }) => theme.colors[color || theme.colors.darkBlue]};
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '85%')};
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '50px')};
 `

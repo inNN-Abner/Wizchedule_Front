@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { theme } from '../../../styles'
-import { InputPassword, InputText } from './styles'
+import { InputPassword, InputText, TimeInputMask } from './styles'
 
 interface InputProps {
     value?: string
@@ -18,7 +18,7 @@ interface InputProps {
 }
 
 export const TextInput = ({ placeholder, mgtop, mgleft, color, bgColor, wdt, hgt  }: InputProps) => {
-  const [text, onChangeText] = React.useState('')
+  const [text, onChangeText] = useState('')
 
   return (
       <InputText
@@ -52,27 +52,32 @@ export const EmailInput = ({ value, placeholder, mgtop, mgleft, onChangeText  }:
 
 export const PasswordInput = ({ value, placeholder, mgtop, onChangeText, secureTextEntry=true }: InputProps) => {
   
-    return (
-        <InputPassword
-          placeholder={placeholder}
-          onChangeText={onChangeText}
-          keyboardType={'default'}
-          secureTextEntry={secureTextEntry}
-          mgtop={mgtop}
-          value={value}
-        ></InputPassword>
-    )
-  }
+  return (
+      <InputPassword
+        placeholder={placeholder}
+        onChangeText={onChangeText}
+        keyboardType={'default'}
+        secureTextEntry={secureTextEntry}
+        mgtop={mgtop}
+        value={value}
+      ></InputPassword>
+  )
+}
 
-  export const TimeInput = ({ pddlft, wdt, hgt, value, placeholder, mgtop, mgleft, onChangeText  }: InputProps) => {
+export const TimeInput = ({ pddlft, wdt, hgt, value, placeholder, mgtop, mgleft, onChangeText  }: InputProps) => {
+  const [date, setDate] = useState('')
 
   return (
-    <InputText
+    <TimeInputMask
+      type={'custom'}
+      options={{
+        mask: '99:99'
+      }}
     wdt={wdt}
     hgt={hgt}
     pddlft={pddlft}
     placeholder={placeholder}
-    onChangeText={onChangeText}
+    onChangeText={setDate}
     keyboardType={'numeric'}
     mgtop={mgtop}
     mgleft={mgleft}

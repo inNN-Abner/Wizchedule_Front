@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { SubContainer, StylezedButton, Windows  } from '../../../components'
 import { CreateModal } from '../../../components/molecules'
 import DatePicker, { getFormatedDate } from 'react-native-modern-datepicker'
+import { TextInputMask } from 'react-native-masked-text'
 
 export const Calendar = () => {
   
@@ -41,7 +42,8 @@ export const Calendar = () => {
             bdrdTR='0'    
             >
             
-        <StylezedButton 
+        <StylezedButton
+              
             label={date}
             bg='transparent'
             color='darkBlue'
@@ -49,7 +51,7 @@ export const Calendar = () => {
             mgtop='0'
             onPress={handleOnPress}
             />
-
+          
             <CreateModal
             visible={openModal} 
             bg='white' 

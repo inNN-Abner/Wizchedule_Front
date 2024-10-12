@@ -6,7 +6,7 @@ export const DefineModality = () => {
   return (
     <Windows
           dir='row'
-          mgtop='50'
+          mgtop='40'
           wdt='350'
           hgt='125'
           bg='darkGrayII'
