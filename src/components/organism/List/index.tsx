@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import contacts from '../../../../contacts'
 import { FlatList } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native'
 import { ListContainer, ContactPhoto, ContactName, ContactInfo, SubContainer } from '../../atoms'
 
-export const ListOfContacts = ({ navigation }) => {
+export const ListOfContacts: React.FC<{ navigation: any; list: any[] }> = ({ navigation, list }) => {
+
     return (       
         <ScrollView>
-        <FlatList data={ contacts } renderItem={({ index, item }) => (
+        <FlatList data={ list }
+            keyExtractor={(item) => item.id.toString()} 
+            renderItem={({ item }) => (
         
             <TouchableOpacity onPress={() => {
                 navigation.navigate('ContactsDetail', {
@@ -44,11 +47,9 @@ export const ListOfContacts = ({ navigation }) => {
                         </SubContainer>
                     
                 </ListContainer>
-            </TouchableOpacity>
-            
-        )}
-        > 
-        </FlatList>
+            </TouchableOpacity>  
+            )}
+        />
         </ScrollView>
     )
 }

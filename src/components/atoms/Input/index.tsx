@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import contacts from '../../../../contacts'
 import { theme } from '../../../styles'
 import { InputPassword, InputText, TimeInputMask } from './styles'
 
@@ -15,6 +16,7 @@ interface InputProps {
     keyboardType?: string
     secureTextEntry?: boolean
     onChangeText?: (text: string) => void
+    setList: (list: any[]) => void;
 }
 
 export const TextInput = ({ placeholder, mgtop, mgleft, color, bgColor, wdt, hgt  }: InputProps) => {
@@ -84,5 +86,37 @@ export const TimeInput = ({ pddlft, wdt, hgt, value, placeholder, mgtop, mgleft,
     value={value}
     textAlign={'center'}
   />
+  )
+}
+
+export const SearchInput: React.FC<InputProps> = ({ placeholder, mgtop, mgleft, color, bgColor, wdt, hgt, setList }) => {
+  const [searchText, setSearchText] = useState('')
+
+  const handleSearch = (text: string) => {
+    setSearchText(text)
+    if (text === '') {
+        setList(contacts)
+    } else {
+        const filteredList = contacts.filter(item =>
+            item.name.toLowerCase().includes(text.toLowerCase())
+        )
+        setList(filteredList)
+    }
+}
+  
+  return (
+      <InputText
+        placeholder={placeholder}
+        onChangeText={handleSearch}
+        value={searchText}
+        keyboardType={'default'}
+        mgtop={mgtop}
+        mgleft={mgleft}
+        color={color}
+        bgColor={bgColor}
+        wdt={wdt}
+        hgt={hgt}
+        placeholderTextColor={theme.colors.gray}
+      />
   )
 }

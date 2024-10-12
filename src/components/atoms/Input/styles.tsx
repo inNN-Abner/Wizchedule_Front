@@ -27,6 +27,7 @@ export const InputPassword = styled.TextInput
     backgroundColor: ${({ color, theme }) => color || theme.colors.white };
     placeholderTextColor: ${({ color, theme }) => color || theme.colors.darkBlue };
 `
+
 export const TimeInputMask = styled(TextInputMask)
     <{ color?: string; mgtop?: string; pddlft?: string; mgleft?: string; bgColor?: string; wdt?: string; hgt?: string }>`
     borderRadius: 20px;
