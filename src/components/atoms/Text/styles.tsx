@@ -46,11 +46,12 @@ export const ContactNameText = styled.Text
 `
 
 export const ContactInfoText = styled.Text
-  <{ color?: string; cor?: string; mgtop?: string; mgleft?: string; alignSelf?: string; ftSz?: string; ftWgt?: string; ftype?: string }>`
+  <{ color?: string; cor?: string; mgtop?: string; mgleft?: string; mgright?: string; alignSelf?: string; ftSz?: string; ftWgt?: string; ftype?: string }>`
     color: ${({ color, theme }) => theme.colors[color || 'darkRed']};
     font-family: ${({ ftype, theme }) => theme.fonts[ftype || 'regular']};
     font-weight: ${({ ftWgt }) => ftWgt || 'normal' };
     font-size: ${({ theme, ftSz }) => (ftSz ? `${theme.metrics.px(ftSz)}px` : `${theme.metrics.px(11)}px`)};
     marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 0])}px;
     marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 0])}px;
+    marginRight: ${({ mgright, theme }) => theme.metrics.px([mgright || 0])}px;
 `

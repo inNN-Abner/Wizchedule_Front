@@ -2,18 +2,18 @@ import { GenericText, Container, HeaderPage, SubContainer, Calendar  } from '../
 
 export const SchedulingScreen = () => {
   return (
-    <Container align='flex-start'>
+      <Container align='flex-start'>
 
-      <HeaderPage />
-        <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>Calendário</GenericText>
-        <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Minhas aulas agendadas</GenericText>
+        <HeaderPage />
+          <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>Calendário</GenericText>
+          <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Minhas aulas agendadas</GenericText>
 
-        <SubContainer align='center' justify='center' hgt='400' mgleft='0'>
+          <SubContainer align='center' justify='center' hgt='400' mgleft='0'>
 
-          <Calendar />
+            <Calendar />
 
-        </SubContainer>
+          </SubContainer>
 
-    </Container>
+      </Container>
   )
 }

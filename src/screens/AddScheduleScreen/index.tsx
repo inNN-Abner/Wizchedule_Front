@@ -1,6 +1,6 @@
 import { Keyboard, TouchableWithoutFeedback } from 'react-native'
 import { GenericText, Container, HeaderPage, SelectDayRow, SubContainer, DefineTime, DefineModality, StylezedButton, Windows } from '../../components'
-import { ContactInfoText, ContactNameText } from '../../components/atoms/Text/styles'
+import { ContactInfoText } from '../../components/atoms/Text/styles'
 
 export const AddScheduleScreen = ({ route, navigation }) => {
 
