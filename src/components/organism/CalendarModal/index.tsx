@@ -38,7 +38,7 @@ export const Calendar = () => {
   }
 
   return (
-      <SubContainer align='center' justify='flex-start' hgt='400' mgleft='0'>
+      <SubContainer align='center' justify='flex-start' maxhgt='10' mgleft='0'>
 
       <Windows 
           bg='darkRed'

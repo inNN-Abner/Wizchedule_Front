@@ -3,6 +3,9 @@ import Fontisto from '@expo/vector-icons/Fontisto'
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 import { Ionicons } from '@expo/vector-icons'
 import { ButtonText, StyledButton } from './styles'
+import { PersonalIcon } from '../PersonalIcon'
+import { ButtonContainer } from '../../molecules/Icon/styles'
+import { ImageSourcePropType } from 'react-native'
 
 interface ButtonProps {
     label?: string
@@ -13,8 +16,12 @@ interface ButtonProps {
     wdt?: string
     hgt?: string
     bdrd?: string
-    source?: string
+    source?: ImageSourcePropType
     mgleft?: string
+    justify?: string
+    align?: string
+    ftSz?: string
+    dir?: string
     children?: React.ReactNode
 }
 
@@ -48,6 +55,42 @@ export const DayButton = ({ hgt, label, color, bg, onPress }: ButtonProps ) => {
                 color={color}>
                 {label}
             </ButtonText>
+    </StyledButton>
+    )
+}
+
+export const ListOptionButton = ({ source, align, justify, bdrd, wdt, hgt, mgtop, mgleft, label, color, bg, ftSz, onPress }: ButtonProps ) => {
+    return (
+    <StyledButton 
+        justify={justify}
+        align={align}
+        bdrd={bdrd}
+        wdt={wdt}
+        hgt={hgt}
+        mgtop={mgtop}
+        mgleft={mgleft}
+        bg={bg}
+        dir={'row'}
+        onPress={onPress}>
+
+        <ButtonContainer>
+            <PersonalIcon
+                hgt='35'
+                wdt='40'
+                mgleft='10'
+                mgtop='0'
+                source={source} />
+
+            <ButtonText
+                ftSz={ftSz}
+                color={color}
+                mgleft='5'
+                >
+                {label}
+            </ButtonText>
+
+        </ButtonContainer>
+
     </StyledButton>
     )
 }

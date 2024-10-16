@@ -38,7 +38,7 @@ export default [
   },
   {
     id: 5,
-    name: 'Albus Dombledore',
+    name: 'Albus Duas-Portas',
     info: 'Professor de inglês | Presencial e Home-office',
     photo: require('./assets/Icon_2.png'),
     registration: 'A010D01',
@@ -47,7 +47,7 @@ export default [
   },
   {
     id: 6,
-    name: 'Merlin',
+    name: 'Merlani',
     info: 'Professor de inglês | Presencial e Home-office',
     photo: require('./assets/Icon_3.png'),
     registration: 'B020D02',
@@ -57,7 +57,7 @@ export default [
   },
   {
     id: 7,
-    name: 'Gandalf',
+    name: 'Gôlfe',
     info: 'Professor de inglês | Presencial',
     photo: require('./assets/Icon_4.png'),
     registration: 'C030D03',
@@ -66,7 +66,7 @@ export default [
   },
   {
     id: 8,
-    name: 'Erik Frostheim',
+    name: 'Erick Gelado',
     info: 'Professor de alemão | Home-office',
     photo: require('./assets/Icon_5.png'),
     registration: 'D040D04',
