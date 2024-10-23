@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Ionicons } from '@expo/vector-icons'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
-import { LoginScreen, HomeScreen, SchedulingScreen, ContactsScreen, PerfilScreen } from '../screens'
 import { theme } from '../styles/theme'
 import { Keyboard } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { LoginScreen, HomeScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddScheduleScreen } from '../screens'
 
 interface BottomRoutes{
     Principal: string
@@ -17,27 +17,27 @@ interface BottomRoutes{
 const routeIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
     Principal: 'home',
     Agendamentos: 'calendar',
-    Contatos: 'id-card', //people-circle
+    Contatos: 'id-card',
     Perfil: 'person'
 }
 
 const BottomRoute = () => {
     const Tab = createBottomTabNavigator()
-    const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+    const [isKeyboardVisible, setKeyboardVisible] = useState(false)
 
     useEffect(() => {
         const keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', () => {
-            setKeyboardVisible(true);
-        });
+            setKeyboardVisible(true)
+        })
         const keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', () => {
-            setKeyboardVisible(false);
-        });
+            setKeyboardVisible(false)
+        })
 
         return () => {
-            keyboardDidHideListener.remove();
-            keyboardDidShowListener.remove();
-        };
-    }, []);
+            keyboardDidHideListener.remove()
+            keyboardDidShowListener.remove()
+        }
+    }, [])
     
     return (
         <Tab.Navigator  
@@ -56,7 +56,9 @@ const BottomRoute = () => {
             <Tab.Screen name='Agendamentos' component={SchedulingScreen} />
             <Tab.Screen name='Contatos' component={ContactsScreen} />
             <Tab.Screen name='Perfil' component={PerfilScreen} />
-        
+            <Tab.Screen name='ContactsDetail' component={ContactsDetailScreen} options={{ tabBarButton: () => null}} />
+            <Tab.Screen name='AddSchedule' component={AddScheduleScreen} options={{ tabBarButton: () => null}} />
+                
         </Tab.Navigator>
     )
 }

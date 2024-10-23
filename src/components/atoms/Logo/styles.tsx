@@ -2,7 +2,6 @@ import styled from 'styled-components/native'
 
 export const LogoImage = styled.Image
  <{ wdt?: string; hgt?: string; mgTop?: string; mgRight?: string; jstCont?: string; source?: string }>`    
-
     source: ${({ source }) => source || 'Wizard'};
     justifyContent: ${({ jstCont }) => jstCont || 'flex-start'};
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : `${theme.metrics.px(200)}px`)};

@@ -1,10 +1,10 @@
 import React from 'react'
-import { WhiteHeaderContainer } from './styles'
 import { Logo } from '../../atoms/Logo'
-import { PersonalIcon } from '../../atoms/PersonalIcon'
-import { HeaderTexts } from '../../atoms/Text'
 import Wizard from '../../../../assets/Icon_1.png'
 import WhiteWizard from '../../../../assets/Logo_Wizchedule_branco.png'
+import { PersonalIcon } from '../../atoms/PersonalIcon'
+import { WhiteHeaderContainer } from './styles'
+import { HeaderTexts } from '../../atoms/Text'
 
 interface HeaderProps {
     bg?: string
