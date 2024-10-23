@@ -4,8 +4,8 @@ import { Keyboard, TouchableWithoutFeedback } from 'react-native'
 import { GenericText, Logo, PasswordInput, SubtitleText, StylezedButton, Container, SubContainer, EmailInput, LoginError  } from '../../components'
 
 const mockUserTest = {
-  email: 'A',
-  password: '1'
+  email: 'Abner',
+  password: '1234'
 }
 
 export const LoginScreen = ({ navigation }) => {

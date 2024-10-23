@@ -15,7 +15,6 @@ export const Calendar = () => {
   const [date, setDate] = useState('Selecione uma data')
   const [year, setYear] = useState(today.getFullYear())
 
-
   function handleOnPress () {
     setOpenModal(!openModal)
   }
@@ -38,7 +37,7 @@ export const Calendar = () => {
   }
 
   return (
-      <SubContainer align='center' justify='flex-start' maxhgt='10' mgleft='0'>
+    <SubContainer align='center' justify='flex-start' maxhgt='10' mgleft='0'>
 
       <Windows 
           bg='darkRed'
@@ -97,6 +96,6 @@ export const Calendar = () => {
               </CreateModal>
           </Windows>
 
-      </SubContainer>
+    </SubContainer>
   )
 }

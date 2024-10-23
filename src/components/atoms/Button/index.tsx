@@ -85,6 +85,11 @@ export const ListOptionButton = ({ source, align, justify, bdrd, wdt, hgt, mgtop
                 ftSz={ftSz}
                 color={color}
                 mgleft='5'
+                style={{
+                    flex: 1,
+                    flexWrap: 'wrap',
+                    maxWidth: '80%'
+                }}
                 >
                 {label}
             </ButtonText>

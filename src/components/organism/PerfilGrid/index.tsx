@@ -1,5 +1,5 @@
 import React from 'react'
-import horarios from '../../../../horarios'
+import horarios from '../../../../arquivosTeste/horarios'
 import { FlatList, Text } from 'react-native'
 import { PerfilGridSkeleton } from '../../molecules'
 import { AddButton, EditButton, ListContainer, TrashButton } from '../../atoms'

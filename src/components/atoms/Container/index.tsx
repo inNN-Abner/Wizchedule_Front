@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 
 export const Container = styled.SafeAreaView
-    <{ dir?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string }>`
+    <{ dir?: string; align?: string; maxhgt?: string; justify?: string; bg?: string; wdt?: string; hgt?: string }>`
     flex: 1;
     display: flex;
     flex-direction: ${({ dir }) => dir || 'column'};
@@ -15,6 +15,7 @@ export const Container = styled.SafeAreaView
 export const SubContainer = styled.SafeAreaView
     <{ mgleft?: string; mgtop?: string; bdrd?: string; dir?: string; flex?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string; maxhgt?: string }>`
     display: flex;
+    border-radius: ${({ bdrd, theme }) => theme.metrics.px([bdrd || 20])}px;
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'};
     justify-content: ${({ justify }) => justify || 'flex-start'};

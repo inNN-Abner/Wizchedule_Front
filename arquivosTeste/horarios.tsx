@@ -35,10 +35,4 @@ export default [
     horario: '08h30 às 09h30',
     modalidade: 'Presencial',
   },
-  {
-    id: 7,
-    diaSemana: 'SEXTA',
-    horario: '10h30 às 11h35',
-    modalidade: 'Presencial',
-  }
 ]

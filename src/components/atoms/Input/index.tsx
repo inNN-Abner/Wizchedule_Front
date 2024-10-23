@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import contacts from '../../../../contacts'
+import contacts from '../../../../arquivosTeste/contacts'
 import { theme } from '../../../styles'
 import { InputPassword, InputText, TimeInputMask } from './styles'
 

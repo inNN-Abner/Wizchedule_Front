@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Keyboard, TouchableWithoutFeedback  } from 'react-native'
 import { GenericText, Windows, Container, SubContainer, HeaderPage, ListOfContacts, SearchInput  } from '../../components'
-import contacts from '../../../contacts'
+import contacts from '../../../arquivosTeste/contacts'
 
 export const ContactsScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [list, setList] = useState(contacts)
