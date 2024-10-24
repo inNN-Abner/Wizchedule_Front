@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Wizard from '../../../assets/Logo_Wizchedule.png'
 import { Keyboard, TouchableWithoutFeedback } from 'react-native'
 import { GenericText, Logo, PasswordInput, SubtitleText, StylezedButton, Container, SubContainer, EmailInput, LoginError  } from '../../components'
+import Switch_lang from '../../components/atoms/Switch'
+
 
 const mockUserTest = {
   email: 'Abner',
@@ -29,7 +31,8 @@ export const LoginScreen = ({ navigation }) => {
 
         <Logo source={Wizard} />
         <GenericText>WiZcHeduLe</GenericText>
-
+            <Switch_lang lang="EN"/>
+            <Switch_lang lang="BR"/>
         <SubContainer align='center'>
 
           <SubtitleText mgtop='15' alignSelf='flex-start' >E-mail</SubtitleText>
