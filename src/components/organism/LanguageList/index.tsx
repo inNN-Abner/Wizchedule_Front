@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { ListOptionButton, SubContainer, SubtitleText, Windows } from '../../atoms'
+import { ListOptionButton, SubContainer, SubtitleText } from '../../atoms'
 import idiomas from '../../../../arquivosTeste/idiomas'
 
 export const LanguageList = () => {
@@ -12,7 +12,7 @@ export const LanguageList = () => {
     }
 
     return (
-        <SubContainer align='center' maxhgt='100' mgleft='5' bdrd='10' bg='darkGrayII' wdt='160'>
+        <SubContainer align='center' maxhgt='100' mgleft='5' bdrd='10' bg='darkGrayII' wdt='175'>
             
             <SubtitleText
                 children={'Idiomas'}
@@ -29,7 +29,7 @@ export const LanguageList = () => {
                         key={item.id}
                         onPress={() => handleButtonPress(item.id)}
                         justify='flex-start'
-                        wdt='150'
+                        wdt='165'
                         hgt='50'
                         bdrd='5'
                         mgleft='0'
@@ -38,7 +38,7 @@ export const LanguageList = () => {
                         bg={selectedId === item.id ? 'darkRed' : 'white'}
                         source={item.bandeira}
                         label={item.idioma}
-                        ftSz="16"
+                        ftSz='16'
                     />
                 ))}
                 

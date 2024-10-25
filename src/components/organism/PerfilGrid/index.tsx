@@ -7,7 +7,7 @@ import { AddButton, EditButton, ListContainer, TrashButton } from '../../atoms'
 export const PerfilGrid = ({ navigation }) => {
     return (
     <>
-    <FlatList data={ horarios } renderItem={({ index, item }) => (
+    <FlatList data={ horarios } renderItem={({ item }) => (
 
             <ListContainer
                 mgtop='-3'
@@ -49,7 +49,9 @@ export const PerfilGrid = ({ navigation }) => {
             </ListContainer>
         )}
         >
-        </FlatList><ListContainer
+        </FlatList>
+        
+        <ListContainer
             mgtop='0'
             mgleft='0'
             bg='darkGrayII'
@@ -60,7 +62,6 @@ export const PerfilGrid = ({ navigation }) => {
             <Text style={{ fontWeight: 'bold' }}>Adicionar</Text> {'\n'} novo horário</PerfilGridSkeleton>
 
             <AddButton
-            label={'Teste'}
             wdt='96'
             hgt='50'
             bdrd='10'

@@ -13,8 +13,9 @@ export const Container = styled.SafeAreaView
 `
 
 export const SubContainer = styled.SafeAreaView
-    <{ mgleft?: string; mgtop?: string; bdrd?: string; dir?: string; flex?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string; maxhgt?: string }>`
+    <{ mgleft?: string; mgtop?: string; bdrd?: string; dir?: string; wrap?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string; maxhgt?: string }>`
     display: flex;
+    flexWrap: ${({ wrap }) => wrap || 'nowrap'};
     border-radius: ${({ bdrd, theme }) => theme.metrics.px([bdrd || 20])}px;
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'};

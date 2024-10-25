@@ -4,11 +4,12 @@ import FontAwesome from '@expo/vector-icons/FontAwesome'
 import { Ionicons } from '@expo/vector-icons'
 import { ButtonText, StyledButton } from './styles'
 import { PersonalIcon } from '../PersonalIcon'
-import { ButtonContainer } from '../../molecules/Icon/styles'
 import { ImageSourcePropType } from 'react-native'
 
 interface ButtonProps {
     label?: string
+    modalidade?: string
+    horario?: string
     onPress?: () => void
     color?: string
     bg?: string
@@ -25,18 +26,51 @@ interface ButtonProps {
     children?: React.ReactNode
 }
 
-export const StylezedButton = ({ bdrd, hgt, wdt, label, color, bg, mgtop, onPress }: ButtonProps ) => {
+export const StylezedButton = ({ bdrd, hgt, wdt, label, color, bg, mgtop, mgleft, ftSz, onPress }: ButtonProps ) => {
     return (
     <StyledButton 
         bg={bg}
         mgtop={mgtop}
+        mgleft={mgleft}
         hgt={hgt}
         wdt={wdt}
         bdrd={bdrd}
-        onPress={onPress}>
+        onPress={onPress}
+        >
             <ButtonText
-                color={color}>
+                color={color}
+                ftSz={ftSz}
+                >
                 {label}
+            </ButtonText>
+    </StyledButton>
+    )
+}
+
+export const DefineTimeButton = ({ modalidade, horario, bdrd, hgt, wdt, label, color, bg, mgtop, mgleft, ftSz, onPress }: ButtonProps ) => {
+    return (
+    <StyledButton 
+        bg={bg}
+        mgtop={mgtop}
+        mgleft={mgleft}
+        hgt={hgt}
+        wdt={wdt}
+        bdrd={bdrd}
+        onPress={onPress}
+        >
+            <ButtonText
+                color={color}
+                ftSz={ftSz}
+                >
+                {modalidade}
+            </ButtonText>
+
+            <ButtonText
+                color={color}
+                ftSz={ftSz}
+                >
+                {horario}
+
             </ButtonText>
     </StyledButton>
     )

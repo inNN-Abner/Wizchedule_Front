@@ -1,9 +1,9 @@
-import { GenericText, Container, HeaderPage, SubContainer, Calendar, SubtitleText, ListOptionButton, DefineTime  } from '../../components'
+import { GenericText, Container, HeaderPage, SubContainer, Calendar, SubtitleText, ListOptionButton, DefineTime, EditButton  } from '../../components'
 import { DefineTimeScheduling } from '../../components/organism/DefineTimeScheduling'
 import { LanguageList } from '../../components/organism/LanguageList'
 import { TeacherList } from '../../components/organism/TeacherSelectList'
 
-export const SchedulingScreen = () => {
+export const SchedulingScreen = ({ navigation }) => {
   return (
       <Container align='flex-start' maxhgt='100'>
 
@@ -15,12 +15,15 @@ export const SchedulingScreen = () => {
 
             <Calendar />
 
-            <SubContainer maxhgt='100' align='justify-start' justify='center' mgleft='0' mgtop='110' dir='row'>
+            <SubContainer maxhgt='100' align='justify-start' justify='center' mgleft='0' mgtop='90' dir='row'>
               <LanguageList />
               <TeacherList />
             </SubContainer>
 
-          
+            <SubContainer maxhgt='100' align='justify-start' justify='center' mgleft='0' dir='row'>
+              <DefineTimeScheduling navigation={navigation}></DefineTimeScheduling>
+            </SubContainer>
+
           </SubContainer>
 
       </Container>

@@ -44,7 +44,7 @@ export const Calendar = () => {
           hgt='40'
           bdrdBL='0'
           bdrdBR='0'
-          mgtop='25'
+          mgtop='15'
           justify='flex-end'
         >
           <ContactInfoText

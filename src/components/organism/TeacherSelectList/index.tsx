@@ -12,7 +12,7 @@ export const TeacherList = () => {
     }
 
     return (
-        <SubContainer align='center' maxhgt='100' mgleft='5' bdrd='10' wdt='160' bg='darkGrayII'>
+        <SubContainer align='center' maxhgt='100' mgleft='5' bdrd='10' wdt='175' bg='darkGrayII'>
             
             <SubtitleText
                 children={'Professores'}
@@ -29,7 +29,7 @@ export const TeacherList = () => {
                         key={item.id}
                         onPress={() => handleButtonPress(item.id)}
                         justify='flex-start'
-                        wdt='150'
+                        wdt='165'
                         hgt='50'
                         bdrd='5'
                         mgleft='0'
@@ -38,7 +38,7 @@ export const TeacherList = () => {
                         bg={selectedId === item.id ? 'darkRed' : 'white'}
                         source={item.photo}
                         label={item.name}
-                        ftSz='12'
+                        ftSz='14'
                     />
                 ))}
                 
