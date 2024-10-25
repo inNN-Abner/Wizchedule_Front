@@ -71,15 +71,15 @@ export const ListOptionButton = ({ source, align, justify, bdrd, wdt, hgt, mgtop
         mgleft={mgleft}
         bg={bg}
         dir={'row'}
-        onPress={onPress}>
-
-        <ButtonContainer>
+        onPress={onPress}
+        >
             <PersonalIcon
                 hgt='35'
                 wdt='40'
                 mgleft='10'
                 mgtop='0'
-                source={source} />
+                source={source}
+                />
 
             <ButtonText
                 ftSz={ftSz}
@@ -93,9 +93,6 @@ export const ListOptionButton = ({ source, align, justify, bdrd, wdt, hgt, mgtop
                 >
                 {label}
             </ButtonText>
-
-        </ButtonContainer>
-
     </StyledButton>
     )
 }
