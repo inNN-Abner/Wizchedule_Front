@@ -9,7 +9,7 @@ npm install --legacy-peer-deps
 
 
 # Executar o projeto em desenvolvimento
-1. npm start
+1. yarn start
 
 
 # Projeto
