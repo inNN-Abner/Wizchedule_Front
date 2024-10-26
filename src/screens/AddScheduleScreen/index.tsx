@@ -41,7 +41,7 @@ export const AddScheduleScreen = ({ route, navigation }) => {
             <DefineModality />
           
 
-            <SubContainer align='center' justify='flex-end' hgt='125'>
+            <SubContainer align='center' justify='flex-end' hgt='100'>
               
               <StylezedButton 
                 wdt='350'

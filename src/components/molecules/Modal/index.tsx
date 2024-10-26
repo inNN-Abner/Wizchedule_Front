@@ -1,7 +1,7 @@
 import React from 'react'
 import { DefineModal } from './styles'
 import { Modal } from 'react-native'
-import { Container, ModalContainer, SubContainer } from '../../atoms'
+import { ModalContainer } from '../../atoms'
 
 interface ModalProps {
     animationType?: 'none' | 'slide' | 'fade'
