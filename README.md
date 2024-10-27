@@ -5,7 +5,7 @@ Desenvolvimento do front-end para o APP Wizchedule - Projeto Ingrador - FATEC (5
 # Instalação
 1. Clonar o repositório
 2. Instalar as dependências resolvendo-as: 
-npm install --legacy-peer-deps
+yarn install --ignore-engines
 
 
 # Executar o projeto em desenvolvimento
