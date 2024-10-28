@@ -1,40 +1,58 @@
-import { useState } from 'react'
-import { GenericText, Container, HeaderPage, SubContainer, Calendar, StylezedButton } from '../../components'
-import { CreateModal } from '../../components/molecules'
-import { DefineTimeScheduling } from '../../components/organism/DefineTimeScheduling'
-import { LanguageList } from '../../components/organism/LanguageList'
-import { TeacherList } from '../../components/organism/TeacherSelectList'
+import React, { useState } from 'react'
+import { DefineTimeButton, GenericText, HeaderTexts, StylezedButton, SubContainer, SubtitleText } from '../../atoms'
+import horarios from '../../../../arquivosTeste/horarios'
+import { CreateModal } from '../../molecules'
 
-export const SchedulingScreen = ({ navigation }) => {
+export const DefineTimeScheduling: React.FC<{ navigation: any }>  = ({ navigation }) => {
 
-  const [openModal, setOpenModal] = useState(false)
+    const [openModal, setOpenModal] = useState(false)
+    const [selectedId, setSelectedId] = useState<number | null>(null)
 
-  function handleOnPress () {
-    setOpenModal(!openModal)
-  }    
+    function handleOnPress () {
+        setOpenModal(!openModal)
+      }    
 
-  return (
-      <Container align='flex-start' maxhgt='100'>
+    const handleButtonPress = (id: number) => {
+        setSelectedId(id)
+    }
 
-        <HeaderPage />
-          <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>Calendário</GenericText>
-          <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Minhas aulas agendadas</GenericText>
+    return (
+        <SubContainer dir='column' align='center' mgleft='0' maxhgt='100' mgtop='10'>
+            
+            <SubtitleText
+                children={'Horários disponíveis'}
+                mgleft='0'
+                mgtop='0'
+                pddleft='0'
+                ftSz='18'
+            />
+            
+        <SubContainer dir='row' align='center' justify='center' wrap='wrap'
+        maxhgt='60' mgleft='0' bdrd='10' bg='darkGrayII'>
 
-          <SubContainer maxhgt='28' justify='flex-start' mgleft='0'>
+                {horarios.map((item, index) => (
 
-            <Calendar />
-
-            <SubContainer maxhgt='100' align='justify-start' justify='center' mgleft='0' mgtop='90' dir='row'>
-              <LanguageList />
-              <TeacherList />
-            </SubContainer>
-
-            <SubContainer maxhgt='100' align='justify-start' justify='center' mgleft='0' dir='row'>
-              <DefineTimeScheduling navigation={navigation} />
-            </SubContainer>
-
-              <SubContainer dir='row' justify='center' mgleft='0' mgtop='-30' bdrd='0'>
-              <StylezedButton
+                    <DefineTimeButton
+                        key={item.id}
+                        onPress={() => handleButtonPress(item.id)}
+                        justify='center'
+                        align='center'
+                        wdt='120'
+                        hgt='50'
+                        bdrd='10'
+                        mgleft={index % 3 !== 0 ? '6' : '0'}
+                        mgtop={index >= 2 ? '5' : '5'}
+                        color={'white'}
+                        bg={selectedId === item.id ? 'darkRed' : 'gray'}
+                        modalidade={item.modalidade}
+                        horario={item.horario}
+                        ftSz='14'
+                    />
+                ))}
+        </SubContainer>
+            
+        <SubContainer dir='row' justify='center' mgleft='0' mgtop='15' bdrd='0'>
+            <StylezedButton
                 bg='white'
                 mgtop='0'
                 bdrd='10'
@@ -102,8 +120,6 @@ export const SchedulingScreen = ({ navigation }) => {
                         />
                 </CreateModal>
             </SubContainer>
-          </SubContainer>
-
-      </Container>
-  )
+        </SubContainer>
+    )
 }

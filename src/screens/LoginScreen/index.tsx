@@ -61,7 +61,7 @@ export const LoginScreen = ({ navigation }) => {
             onPress={handleLogin}/>
             
             <StylezedButton label='CADASTRAR' bg='white' color='darkRed' mgtop='10'></StylezedButton>
-            <StylezedButton label='Esqueci a senha' bg='darkBlue' color='white' mgtop='48'></StylezedButton>
+            <StylezedButton label='Esqueci a senha' bg='darkBlue' color='white' mgtop='20'></StylezedButton>
 
           </SubContainer>
         </SubContainer>
