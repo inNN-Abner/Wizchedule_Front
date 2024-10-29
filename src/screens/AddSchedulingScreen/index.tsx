@@ -60,18 +60,18 @@ export const SchedulingScreen = ({ navigation }) => {
                     bg='white'
                     bdrd='10' 
                     wdt='300'
-                    hgt='200'
+                    hgt='150'
                     pdd='0'
                     align='center'
-                    justify='center'
                 >   
-                    <GenericText ftype='bold' color='darkBlue' mgtop='0' mgleft='0' ftSz='16'>
+                    <GenericText ftype='bold' color='darkBlue' mgtop='-10'  mgleft='0' ftSz='16'>
                         Confirmar agendamento</GenericText>
 
-                    <GenericText ftype='regular' color='darkBlue' mgtop='5' ftSz='14' mgleft=''>
+                    <GenericText ftype='regular' color='darkBlue' mgtop='5' ftSz='14'>
                         Ao clicar em "Agendar" sua aula será agendada.
                         Caso não vá comparecer, será necessário desmarcar o agendamento com antecedência!</GenericText>
 
+                      <SubContainer dir='row-reverse' mgleft='0' justify='center' align='center' maxhgt='0' mgtop='20'>
                         <StylezedButton 
                         label={'Agendar'}
                         bg='darkRed'
@@ -100,6 +100,7 @@ export const SchedulingScreen = ({ navigation }) => {
                             navigation.navigate('Appointments')
                         }}
                         />
+                      </SubContainer>
                 </CreateModal>
             </SubContainer>
           </SubContainer>
