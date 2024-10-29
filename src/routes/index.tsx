@@ -5,19 +5,19 @@ import { Ionicons } from '@expo/vector-icons'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { LoginScreen, HomeScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddScheduleScreen } from '../screens'
+import { LoginScreen, HomeScreen, ReportSchedulingScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddTeacherScreen } from '../screens'
 
 interface BottomRoutes{
-    Principal: string
-    Agendamentos: string
-    Contatos: string
+    Main: string
+    Appointments: string
+    Contacts: string
     Perfil: string
 }
 
 const routeIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
-    Principal: 'home',
-    Agendamentos: 'calendar',
-    Contatos: 'id-card',
+    Main: 'home',
+    Appointments: 'calendar',
+    Contacts: 'id-card',
     Perfil: 'person'
 }
 
@@ -52,13 +52,14 @@ const BottomRoute = () => {
                     display: isKeyboardVisible ? 'none' : 'flex',
                 },
             })}>
-            <Tab.Screen name='Principal' component={HomeScreen} />
-            <Tab.Screen name='Agendamentos' component={SchedulingScreen} />
-            <Tab.Screen name='Contatos' component={ContactsScreen} />
+            <Tab.Screen name='Main' component={HomeScreen} />
+            <Tab.Screen name='Appointments' component={ReportSchedulingScreen} />
+            <Tab.Screen name='Contacts' component={ContactsScreen} />
             <Tab.Screen name='Perfil' component={PerfilScreen} />
             <Tab.Screen name='ContactsDetail' component={ContactsDetailScreen} options={{ tabBarButton: () => null}} />
-            <Tab.Screen name='AddSchedule' component={AddScheduleScreen} options={{ tabBarButton: () => null}} />
-                
+            <Tab.Screen name='AddTeacher' component={AddTeacherScreen} options={{ tabBarButton: () => null}} />
+            <Tab.Screen name='AddSchedule' component={SchedulingScreen} options={{ tabBarButton: () => null}} />
+
         </Tab.Navigator>
     )
 }

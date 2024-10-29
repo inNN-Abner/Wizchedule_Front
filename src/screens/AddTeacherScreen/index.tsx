@@ -2,7 +2,7 @@ import { Keyboard, TouchableWithoutFeedback } from 'react-native'
 import { GenericText, Container, HeaderPage, SelectDayRow, SubContainer, DefineTime, DefineModality, StylezedButton, Windows } from '../../components'
 import { ContactInfoText } from '../../components/atoms/Text/styles'
 
-export const AddScheduleScreen = ({ route, navigation }) => {
+export const AddTeacherScreen = ({ navigation }) => {
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -49,7 +49,7 @@ export const AddScheduleScreen = ({ route, navigation }) => {
                 bdrd='10'
                 label={'Definir agenda'}
                 onPress={() => {
-                  navigation.navigate('Contatos')
+                  navigation.navigate('Contacts')
                 }} />
             
             </SubContainer>

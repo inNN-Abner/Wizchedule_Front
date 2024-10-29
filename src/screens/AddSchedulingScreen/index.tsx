@@ -41,7 +41,7 @@ export const SchedulingScreen = ({ navigation }) => {
                 color='darkRed'
                 label={'Cancelar'}
                 onPress={() => {
-                    navigation.navigate('Principal')
+                    navigation.navigate('Appointments')
                 }}
             />
 
@@ -82,7 +82,7 @@ export const SchedulingScreen = ({ navigation }) => {
                         ftSz='18'
                         onPress={() => {
                             handleOnPress(),
-                            navigation.navigate('Principal')
+                            navigation.navigate('Appointments')
                         }}
                         />
 
@@ -97,7 +97,7 @@ export const SchedulingScreen = ({ navigation }) => {
                         ftSz='18'
                         onPress={() => {
                             handleOnPress(),
-                            navigation.navigate('Principal')
+                            navigation.navigate('Appointments')
                         }}
                         />
                 </CreateModal>
