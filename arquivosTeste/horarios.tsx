@@ -47,7 +47,7 @@ export default [
     dia: '',
     mes: '',
     ano: '',
-    data: '2024-11-01'
+    data: '2024-11-02'
   },
   {
     id: 6,
