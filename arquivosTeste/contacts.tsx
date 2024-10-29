@@ -7,9 +7,9 @@ export default [
     registration: 'A010D01',
     account: 'Wizard - Professor',
     email: 'albus.dumbledore@email.com',
-    diaSemana: '',
-    horario: '',
-    modalidade: '',
+    weekDay: '',
+    time: '',
+    modality: ''
   },
   {
     id: 2,
@@ -19,10 +19,9 @@ export default [
     registration: 'B020D02',
     account: 'Wizard - Professor',
     email: 'merlin.professora@email.com',
-    diaSemana: '',
-    horario: '',
-    modalidade: '',
-
+    weekDay: '',
+    time: '',
+    modality: ''
   },
   {
     id: 3,
@@ -32,9 +31,9 @@ export default [
     registration: 'C030D03',
     account: 'Wizard - Professor',
     email: 'gan-dalf-778@email.com',
-    diaSemana: '',
-    horario: '',
-    modalidade: '',
+    weekDay: '',
+    time: '',
+    modality: ''
   },
   {
     id: 4,
@@ -43,10 +42,9 @@ export default [
     photo: require('../assets/Icon_5.png'),
     registration: 'D040D04',
     account: 'Wizard - Professor',
-    email: 'erik-fros.157@email.com',
-    diaSemana: '',
-    horario: '',
-    modalidade: '',
+    weekDay: '',
+    time: '',
+    modality: ''
   },
   {
     id: 5,
@@ -56,9 +54,9 @@ export default [
     registration: 'A010D01',
     account: 'Wizard - Professor',
     email: 'albus.dumbledore@email.com',
-    diaSemana: '',
-    horario: '',
-    modalidade: '',
+    weekDay: '',
+    time: '',
+    modality: ''
   },
   {
     id: 6,
@@ -68,10 +66,9 @@ export default [
     registration: 'B020D02',
     account: 'Wizard - Professor',
     email: 'merlin.professora@email.com',
-    diaSemana: '',
-    horario: '',
-    modalidade: '',
-
+    weekDay: '',
+    time: '',
+    modality: ''
   },
   {
     id: 7,
@@ -81,9 +78,9 @@ export default [
     registration: 'C030D03',
     account: 'Wizard - Professor',
     email: 'gan-dalf-778@email.com',
-    diaSemana: '',
-    horario: '',
-    modalidade: '',
+    weekDay: '',
+    time: '',
+    modality: ''
   },
   {
     id: 8,
@@ -93,8 +90,8 @@ export default [
     registration: 'D040D04',
     account: 'Wizard - Professor',
     email: 'erik-fros.157@email.com',
-    diaSemana: '',
-    horario: '',
-    modalidade: '',
+    weekDay: '',
+    time: '',
+    modality: ''
   } 
 ]
