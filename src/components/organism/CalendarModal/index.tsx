@@ -22,6 +22,7 @@ export const Calendar = () => {
   function handleChange (propDate: string) {
     const [year, month, day] = propDate.split('/').map(Number)
     const selectedDate = new Date(year, month - 1, day)
+    console.log(selectedDate)
 
     const formattedDate = formatDate(selectedDate)
     setDate(formattedDate);

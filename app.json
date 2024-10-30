@@ -24,7 +24,8 @@
       "favicon": "./assets/Logo_Wizchedule.png"
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      "expo-secure-store"
     ]
   }
 }

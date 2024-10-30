@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Wizard from '../../../assets/Logo_Wizchedule.png'
 import { Keyboard, TouchableWithoutFeedback } from 'react-native'
 import { GenericText, Logo, PasswordInput, SubtitleText, StylezedButton, Container, SubContainer, EmailInput, LoginError  } from '../../components'
+import { API_URL } from '../../config/constants'
+import * as SecureStore from 'expo-secure-store'
 
 const mockUserTest = {
   email: 'A',
@@ -14,12 +16,30 @@ export const LoginScreen = ({ navigation }) => {
   const [passwordValue, setPasswordValue] = useState('')
   const [errorMessage, setErrorMessage] = useState(' ')
 
-  const handleLogin = () => {
-    if (emailValue === mockUserTest.email && passwordValue === mockUserTest.password) {
-      navigation.navigate('Home')
-    } else {
-      setErrorMessage ('E-mail ou senha inválidos!')
-    }
+  const handleLogin = async() => {
+    try{
+      const resp = await fetch(`${API_URL}/auth/login`,{
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({email: emailValue, senha: passwordValue}),
+  })
+  
+      if(resp.status == 200){
+        const data = await resp.json()
+
+        SecureStore.setItemAsync('token', data.token)
+
+        if (data.tipo == 'Aluno') navigation.navigate('Home')
+        else navigation.navigate('Home')
+
+      } else setErrorMessage('E-mail ou senha inválidos!')
+
+    } catch (e) {
+      console.log(e)
+      setErrorMessage("Erro ao efetuar login")
+    } 
   }
 
   return (
