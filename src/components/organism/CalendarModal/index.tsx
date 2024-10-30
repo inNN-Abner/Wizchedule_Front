@@ -4,10 +4,12 @@ import DatePicker, { getFormatedDate } from 'react-native-modern-datepicker'
 import { ContactInfoText } from '../../atoms/Text/styles'
 import { SubContainer, StylezedButton, Windows  } from '../../../components'
 
+export let selectedDate: Date
+
 export const Calendar = () => {
   
   const today = new Date()
-
+  
   today.setDate(today.getDate() + 1);
   const startDate = getFormatedDate(today, 'YYYY/MM/DD')
 
@@ -21,11 +23,10 @@ export const Calendar = () => {
  
   function handleChange (propDate: string) {
     const [year, month, day] = propDate.split('/').map(Number)
-    const selectedDate = new Date(year, month - 1, day)
-    console.log(selectedDate)
+    selectedDate = new Date(year, month - 1, day)
 
     const formattedDate = formatDate(selectedDate)
-    setDate(formattedDate);
+    setDate(formattedDate)
     setYear(selectedDate.getFullYear())
   }
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { GenericText, Container, HeaderPage, SubContainer, Calendar, StylezedButton } from '../../components'
+import { GenericText, Container, HeaderPage, SubContainer, Calendar, StylezedButton, selectedDate } from '../../components'
 import { CreateModal } from '../../components/molecules'
 import { DefineTimeScheduling } from '../../components/organism/DefineTimeScheduling'
 import { LanguageList } from '../../components/organism/LanguageList'
@@ -12,6 +12,11 @@ export const SchedulingScreen = ({ navigation }) => {
   function handleOnPress () {
     setOpenModal(!openModal)
   }    
+
+  function handleScheduling (){
+    const formattedDate = selectedDate.toString().slice(0, 10) //pegar data formatada para adicionar no agendamento
+    // adicionar restante das informacoes para realizar a requisicao de cadastro do agendamento
+  }
 
   return (
       <Container align='flex-start' maxhgt='100'>
