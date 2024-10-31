@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 
 export const StyledButton = styled.TouchableOpacity
-<{ color?: string; dir?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string; bdrd?: string; mgleft?: string; mgtop?: string; source?: string }>`
+<{ color?: string; dir?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string; bdrd?: string; mgleft?: string; mgright?: string; mgtop?: string; source?: string }>`
     flexDirection: ${({ dir }) => dir || 'column'};
     width: ${({ wdt }) => (wdt ? (wdt) : '165px')};
     height: ${({ hgt }) => (hgt ? (hgt) : '48px')};
@@ -10,6 +10,7 @@ export const StyledButton = styled.TouchableOpacity
     border-radius: ${({ bdrd, theme }) => theme.metrics.px([bdrd || 20])}px;
     marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 20])}px;
     marginLeft: ${({ mgleft, theme }) => theme.metrics.px([mgleft || 0])}px;
+    marginRight: ${({ mgright, theme }) => theme.metrics.px([mgright || 0])}px;
     align-items: ${({ align }) => align || 'center'};
     justify-content: ${({ justify }) => justify || 'center'};
     source: ${({ source }) => source || 'Edit'};

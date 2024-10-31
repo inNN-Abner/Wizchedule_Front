@@ -11,9 +11,9 @@ export const TitleText = styled.Text
 `
 
 export const TitleInput = styled.Text
-  <{ color?: string; pddleft?: string; mgleft?: string; mgtop?: string; alignSelf?: string; ftype?: string; ftSz?: string }>`
+  <{ color?: string; pddleft?: string; mgleft?: string; ftWgt?: string; mgtop?: string; alignSelf?: string; ftype?: string; ftSz?: string }>`
   font-family: ${({ ftype, theme }) => theme.fonts[ftype || 'regular']};
-  font-weight: bold;
+  font-weight: ${({ ftWgt }) => ftWgt || 'bold' };
   align-alignSelf: ${({ alignSelf }) => alignSelf || 'flex-start'};
   font-size: ${({ theme, ftSz }) => (ftSz ? `${theme.metrics.px(ftSz)}px` : `${theme.metrics.px(22)}px`)};
   color: ${({ color, theme }) => color || theme.colors.lightGray };
