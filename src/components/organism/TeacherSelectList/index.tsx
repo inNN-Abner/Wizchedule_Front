@@ -3,12 +3,13 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { ListOptionButton, SubContainer, SubtitleText } from '../../atoms'
 import contacts from '../../../../arquivosTeste/contacts'
 
-export const TeacherList = () => {
+export const TeacherList = ({ onTeacherSelected }) => {
 
     const [selectedId, setSelectedId] = useState<number | null>(null)
 
     const handleButtonPress = (id: number) => {
         setSelectedId(id)
+        onTeacherSelected()
     }
 
     return (

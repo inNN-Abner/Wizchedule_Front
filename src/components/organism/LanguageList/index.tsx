@@ -3,12 +3,13 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { ListOptionButton, SubContainer, SubtitleText } from '../../atoms'
 import idiomas from '../../../../arquivosTeste/idiomas'
 
-export const LanguageList = () => {
+export const LanguageList = ({ onLanguageSelected }) => {
 
     const [selectedId, setSelectedId] = useState<number | null>(null)
 
     const handleButtonPress = (id: number) => {
         setSelectedId(id)
+        onLanguageSelected()
     }
 
     return (

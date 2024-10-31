@@ -4,7 +4,7 @@ import DatePicker, { getFormatedDate } from 'react-native-modern-datepicker'
 import { ContactInfoText } from '../../atoms/Text/styles'
 import { SubContainer, StylezedButton, Windows  } from '../../../components'
 
-export const Calendar = () => {
+export const Calendar = ({ onDateSelected }) => {
   
   const today = new Date()
 
@@ -83,7 +83,10 @@ export const Calendar = () => {
                   mode='calendar'
                   selected={date}
                   minimumDate={startDate}
-                  onDateChange={handleChange}
+                  onDateChange={(propDate) => {
+                    handleChange(propDate)
+                    onDateSelected()
+                  }}
                   />
                   
                   <StylezedButton 
