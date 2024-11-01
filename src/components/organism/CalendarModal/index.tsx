@@ -7,7 +7,7 @@ import { SubContainer, StylezedButton, Windows  } from '../../../components'
 export const Calendar = ({ onDateSelected }) => {
   
   const today = new Date()
-
+  
   today.setDate(today.getDate() + 1);
   const startDate = getFormatedDate(today, 'YYYY/MM/DD')
 
@@ -24,7 +24,7 @@ export const Calendar = ({ onDateSelected }) => {
     const selectedDate = new Date(year, month - 1, day)
 
     const formattedDate = formatDate(selectedDate)
-    setDate(formattedDate);
+    setDate(formattedDate)
     setYear(selectedDate.getFullYear())
   }
 
