@@ -1,4 +1,4 @@
-import {LocaleConfig} from 'react-native-calendars'
+import { LocaleConfig } from 'react-native-calendars'
 import { Calendar } from 'react-native-calendars'
 import horarios from '../../../../arquivosTeste/horarios'
 
@@ -48,7 +48,7 @@ const getMarkedDates = () => {
   }, {})
 }
 
-export const CalendarSkeleton = () => {
+export const ScheduleCalendar = ({ navigation }) => {
 
   const markedDates = getMarkedDates()
 
@@ -88,8 +88,8 @@ export const CalendarSkeleton = () => {
 
       markingType={'custom'}
       markedDates={markedDates}
-      onDayPress={(day) => {
-        console.log('selected day', day)
+      onDayPress={() => {
+        navigation.navigate('SummarySchedule')
       }}
     />
   )

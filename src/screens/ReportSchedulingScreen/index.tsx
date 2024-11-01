@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, GenericText, HeaderPage, StylezedButton, SubContainer  } from '../../components'
-import { CalendarSkeleton } from '../../components/molecules';
+import { ScheduleCalendar } from '../../components/molecules';
 
 export const ReportSchedulingScreen = ({ navigation }) => {
   return (
@@ -11,7 +11,7 @@ export const ReportSchedulingScreen = ({ navigation }) => {
       <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Aulas agendadas</GenericText>
 
       <SubContainer align='center' justify='center' mgleft='0' mgtop='15' hgt='380'>
-        <CalendarSkeleton />
+        <ScheduleCalendar navigation={ navigation } />
 
         <StylezedButton
           bg='darkBlue'
