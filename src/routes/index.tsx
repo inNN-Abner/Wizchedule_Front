@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { LoginScreen, HomeScreen, ReportSchedulingScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddTeacherScreen } from '../screens'
+import { LoginScreen, HomeScreen, ReportSchedulingScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddTeacherScreen, SummaryScheduleScreen } from '../screens'
 
 interface BottomRoutes{
     Main: string
@@ -59,7 +59,7 @@ const BottomRoute = () => {
             <Tab.Screen name='ContactsDetail' component={ContactsDetailScreen} options={{ tabBarButton: () => null}} />
             <Tab.Screen name='AddTeacher' component={AddTeacherScreen} options={{ tabBarButton: () => null}} />
             <Tab.Screen name='AddSchedule' component={SchedulingScreen} options={{ tabBarButton: () => null}} />
-
+            <Tab.Screen name='SummarySchedule' component={SummaryScheduleScreen} options={{ tabBarButton: () => null}} />
         </Tab.Navigator>
     )
 }

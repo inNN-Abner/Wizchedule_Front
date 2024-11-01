@@ -24,3 +24,6 @@ export * from './organism/PerfilGrid'
 
 //Exportar tudo que está dentro de 'CalendarModal'
 export * from './organism/CalendarModal'
+
+//Exportar tudo que está dentro de 'SummarySchedule'
+export * from './organism/SummarySchedule'

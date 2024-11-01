@@ -1,10 +1,12 @@
 import React from 'react'
 import Fontisto from '@expo/vector-icons/Fontisto'
 import FontAwesome from '@expo/vector-icons/FontAwesome'
+import MaterialIcons from '@expo/vector-icons/MaterialIcons'
 import { Ionicons } from '@expo/vector-icons'
 import { ButtonText, StyledButton } from './styles'
 import { PersonalIcon } from '../PersonalIcon'
 import { ImageSourcePropType } from 'react-native'
+import { SubContainer } from '../Container'
 
 interface ButtonProps {
     label?: string
@@ -14,6 +16,7 @@ interface ButtonProps {
     color?: string
     bg?: string
     mgtop?: string
+    mgright?: string;
     wdt?: string
     hgt?: string
     bdrd?: string
@@ -26,12 +29,13 @@ interface ButtonProps {
     children?: React.ReactNode
 }
 
-export const StylezedButton = ({ bdrd, hgt, wdt, label, color, bg, mgtop, mgleft, ftSz, onPress }: ButtonProps ) => {
+export const StylezedButton = ({ bdrd, hgt, wdt, label, color, bg, mgtop, mgleft, ftSz, mgright, onPress }: ButtonProps ) => {
     return (
     <StyledButton 
         bg={bg}
         mgtop={mgtop}
         mgleft={mgleft}
+        mgright={mgright}
         hgt={hgt}
         wdt={wdt}
         bdrd={bdrd}
@@ -46,6 +50,33 @@ export const StylezedButton = ({ bdrd, hgt, wdt, label, color, bg, mgtop, mgleft
     </StyledButton>
     )
 }
+
+export const CancelButton = ({ bdrd, hgt, wdt, label, color, bg, mgtop, mgleft, ftSz, mgright, onPress }: ButtonProps ) => {
+    return (
+    
+    <StyledButton 
+        bg={bg}
+        mgtop={mgtop}
+        mgleft={mgleft}
+        mgright={mgright}
+        hgt={hgt}
+        wdt={wdt}
+        bdrd={bdrd}
+        onPress={onPress}
+        >
+        <SubContainer align='center' justify='center' dir='row' bg='white' wdt='160' mgleft='0' bdrd='10'>
+            <MaterialIcons name="cancel" size={22} color="#7f0000" />
+                <ButtonText
+                    mgleft='10'
+                    color={color}
+                    ftSz={ftSz}>
+                    {label}
+                </ButtonText>
+        </SubContainer>    
+    </StyledButton>
+    )
+}
+
 
 export const DefineTimeButton = ({ modalidade, horario, bdrd, hgt, wdt, label, color, bg, mgtop, mgleft, ftSz, onPress }: ButtonProps ) => {
     return (
@@ -130,7 +161,6 @@ export const ListOptionButton = ({ source, align, justify, bdrd, wdt, hgt, mgtop
     </StyledButton>
     )
 }
-
 
 export const EditButton = ({ bg, wdt, hgt, bdrd, mgleft, mgtop, onPress }: ButtonProps ) => {
     return (

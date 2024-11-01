@@ -27,12 +27,13 @@ export const GenericText = ({ children, mgtop, ftype, color, ftSz, mgleft }: Tex
     )
 }
 
-export const SubtitleText = ({ pddleft, mgleft, ftSz, color, children, mgtop, alignSelf }: TextProps) => {
+export const SubtitleText = ({ pddleft, mgleft, ftSz, color, children, mgtop, ftWgt, alignSelf }: TextProps) => {
     return (
         <TitleInput
         ftSz={ftSz}
         color={color}
         mgtop={mgtop}
+        ftWgt={ftWgt}
         mgleft={mgleft}
         pddleft={pddleft}
         alignSelf={alignSelf}
