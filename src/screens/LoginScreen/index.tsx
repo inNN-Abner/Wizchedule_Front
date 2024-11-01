@@ -31,8 +31,7 @@ export const LoginScreen = ({ navigation }) => {
 
         SecureStore.setItemAsync('token', data.token)
 
-        if (data.tipo == 'Aluno') navigation.navigate('Home')
-        else navigation.navigate('Home')
+        navigation.navigate('Home')
 
       } else setErrorMessage('E-mail ou senha inválidos!')
 
