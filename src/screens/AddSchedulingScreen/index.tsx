@@ -71,7 +71,7 @@ export const SchedulingScreen = ({ navigation }) => {
 
 
             {step >= 5 && (
-              <SubContainer dir='row' justify='center' mgleft='0' mgtop='-30' bdrd='0'>
+            <SubContainer dir='row' justify='center' mgleft='0' mgtop='-30' bdrd='0'>
               <StylezedButton
                 bg='white'
                 mgtop='0'
@@ -79,17 +79,17 @@ export const SchedulingScreen = ({ navigation }) => {
                 color='darkRed'
                 label={'Cancelar'}
                 onPress={() => modalCancel()}
-            />
+              />
 
-            <StylezedButton
-                bg='white'
-                mgtop='0'
-                bdrd='10'
-                mgleft='20'
-                color='darkBlue'
-                label={'Agendar'}
-                onPress={() => modalConfirm()}
-            />
+              <StylezedButton
+                  bg='white'
+                  mgtop='0'
+                  bdrd='10'
+                  mgleft='20'
+                  color='darkBlue'
+                  label={'Agendar'}
+                  onPress={() => modalConfirm()}
+              />
 
           
               <CreateModal
