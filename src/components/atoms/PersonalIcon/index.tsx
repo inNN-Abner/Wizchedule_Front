@@ -20,15 +20,3 @@ export const PersonalIcon = ({ source, wdt, hgt, mgtop, mgleft }: PSProps) => {
             />
     )
 }
-
-export const PersonalIcon = ({ source, wdt, hgt, mgtop, mgleft }: PSProps) => {
-    return (
-        <PSIcon 
-            source={source} 
-            wdt={wdt}
-            hgt={hgt}
-            mgtop={mgtop}
-            mgleft={mgleft}
-            />
-    )
-}
