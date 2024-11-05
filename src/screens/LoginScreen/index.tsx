@@ -41,9 +41,6 @@ export const LoginScreen = ({ navigation }) => {
     } 
   }
 
-  // TODO Criar handleCadastro e criar handleEsqueciMinhaSenha
-  // E também suas telas respectivas
-
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 
@@ -82,8 +79,8 @@ export const LoginScreen = ({ navigation }) => {
             <StylezedButton label='ENTRAR' color='white' mgtop='10'         
             onPress={handleLogin}/>
             
-            <StylezedButton label='CADASTRAR' bg='white' color='darkRed' mgtop='10'/>
-            <StylezedButton label='Esqueci a senha' bg='darkBlue' color='white' mgtop='20'/>
+            <StylezedButton label='CADASTRAR' bg='white' color='darkRed' mgtop='10' onPress={() => navigation.navigate('Register')}/>
+            <StylezedButton label='Esqueci a senha' bg='darkBlue' color='white' mgtop='20' wdt='200'/>
 
           </SubContainer>
         </SubContainer>

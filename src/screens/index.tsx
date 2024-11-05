@@ -1,6 +1,7 @@
 export * from './LoginScreen'
 export * from './HomeScreen'
 export * from './PerfilScreen'
+export * from './RegisterScreen'
 export * from './ReportSchedulingScreen'
 export * from './AddSchedulingScreen'
 export * from './ContactsScreen'

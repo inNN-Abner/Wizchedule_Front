@@ -16,7 +16,7 @@ interface InputProps {
     keyboardType?: string
     secureTextEntry?: boolean
     onChangeText?: (text: string) => void
-    setList: (list: any[]) => void;
+    setList?: (list: any[]) => void;
 }
 
 export const TextInput = ({ placeholder, mgtop, mgleft, color, bgColor, wdt, hgt  }: InputProps) => {
@@ -49,6 +49,19 @@ export const EmailInput = ({ value, placeholder, mgtop, mgleft, onChangeText  }:
         mgleft={mgleft}
         value={value}
       />
+  )
+}
+
+export const NameInput = ({ value, placeholder, mgtop, onChangeText}: InputProps) => {
+  
+  return (
+      <InputText
+        placeholder={placeholder}
+        onChangeText={onChangeText}
+        keyboardType={'default'}
+        mgtop={mgtop}
+        value={value}
+      ></InputText>
   )
 }
 
