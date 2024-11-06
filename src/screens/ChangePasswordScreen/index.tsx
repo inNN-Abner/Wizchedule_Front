@@ -29,7 +29,7 @@ export const ChangePasswordScreen = ({ navigation }) => {
 
     } catch (e) {
       console.log(e)
-      setErrorMessage("Erro ao registrar nova senha")
+      setErrorMessage("Erro ao registrar nova senha.")
     } 
   }
 
