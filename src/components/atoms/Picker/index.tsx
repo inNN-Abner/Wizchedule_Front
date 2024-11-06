@@ -4,12 +4,17 @@ import { Dropdown } from 'react-native-element-dropdown'
 import AntDesign from '@expo/vector-icons/AntDesign'
 
 const data = [
-  { label: 'Presencial', value: '1' },
-  { label: 'Home Office', value: '2' },
+  { label: 'Aluno', value: 'Aluno' },
+  { label: 'Professor', value: 'Professor' },
+  { label: 'Administrador', value: 'Administrador' }
 ]
 
-const DropdownComponent = () => {
-  const [value, setValue] = useState(null);
+interface DropdownProps {
+  value: string
+  onChangeValue: (text: string) => void
+}
+
+export const DropdownComponent = ({value, onChangeValue}: DropdownProps) => {
 
   const renderItem = item => {
     return (
@@ -40,7 +45,7 @@ const DropdownComponent = () => {
       placeholder="Selecione um tipo"
       value={value}
       onChange={item => {
-        setValue(item.value)
+        onChangeValue(item.value)
       }}
       renderItem={renderItem}
     />
