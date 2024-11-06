@@ -6,6 +6,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { LoginScreen, HomeScreen, RegisterScreen, ReportSchedulingScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddTeacherScreen, SummaryScheduleScreen } from '../screens'
+import { VerifyScreen } from '../screens/VerifyEmailScreen'
+import { ChangePasswordScreen } from '../screens/ChangePasswordScreen'
 
 interface BottomRoutes{
     Main: string
@@ -74,6 +76,8 @@ export const Routes = () => {
                 <Stack.Screen name='Login' component={LoginScreen} />
                 <Stack.Screen name='Home' component={BottomRoute} />
                 <Stack.Screen name='Register' component={RegisterScreen}/>
+                <Stack.Screen name='Verify' component={VerifyScreen}/>
+                <Stack.Screen name='ChangePassword' component={ChangePasswordScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     )

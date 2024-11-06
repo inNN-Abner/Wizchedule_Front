@@ -76,11 +76,12 @@ export const LoginScreen = ({ navigation }) => {
 
             {errorMessage ? <LoginError>{errorMessage}</LoginError> : null}
             
-            <StylezedButton label='ENTRAR' color='white' mgtop='10'         
-            onPress={handleLogin}/>
+            <StylezedButton label='ENTRAR' color='white' mgtop='10'
+            onPress={(handleLogin)}/>
+            
             
             <StylezedButton label='CADASTRAR' bg='white' color='darkRed' mgtop='10' onPress={() => navigation.navigate('Register')}/>
-            <StylezedButton label='Esqueci a senha' bg='darkBlue' color='white' mgtop='20' wdt='200'/>
+            <StylezedButton label='Esqueci a senha' bg='darkBlue' color='white' mgtop='20' wdt='200' onPress={() => navigation.navigate('Verify')}/>
 
           </SubContainer>
         </SubContainer>
