@@ -12,12 +12,13 @@ export const ChangePasswordScreen = ({ navigation }) => {
 
   const handleChange = async() => {
     try{
+
       const resp = await fetch(`${API_URL}/auth/ChangePassword`,{
       method: 'PUT',
       headers: {
           'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ password: passwordValue }),
+      body: JSON.stringify({ novaSenha: passwordValue }),
   })
       const data = await resp.json()
       console.log(data)
