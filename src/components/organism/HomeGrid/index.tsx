@@ -8,7 +8,7 @@ import { ContactInfoText } from '../../atoms/Text/styles'
 export const HomeGrid = ({ navigation }) => {
     return (
     <>
-    <SubContainer maxhgt='33' wdt='330' align='center' mgtop='15' mgleft='0' bg='white'>
+    <SubContainer hgt='243' wdt='330' align='center' mgtop='15' mgleft='0' bg='white'>
     <Windows 
           bg='darkRed'
           hgt='50'
