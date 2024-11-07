@@ -24,3 +24,16 @@ export const LoginError = ({ children, mgtop, ftype, color, ftSz, jtCt }: Report
         </ErrorMessage>
     )
 }
+
+export const SignupError = ({ children, mgtop, ftype, color, ftSz, jtCt }: ReportErrorPros) => {
+    return (
+        <ErrorMessage
+        mgtop={mgtop}
+        ftype={ftype}
+        color={color}
+        ftSz={ftSz}
+        >
+            {children}
+        </ErrorMessage>
+    )
+}

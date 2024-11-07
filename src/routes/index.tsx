@@ -5,7 +5,9 @@ import { Ionicons } from '@expo/vector-icons'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { LoginScreen, HomeScreen, ReportSchedulingScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddTeacherScreen, SummaryScheduleScreen } from '../screens'
+import { LoginScreen, HomeScreen, RegisterScreen, ReportSchedulingScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddTeacherScreen, SummaryScheduleScreen } from '../screens'
+import { VerifyScreen } from '../screens/VerifyEmailScreen'
+import { ChangePasswordScreen } from '../screens/ChangePasswordScreen'
 
 interface BottomRoutes{
     Main: string
@@ -56,6 +58,7 @@ const BottomRoute = () => {
             <Tab.Screen name='Appointments' component={ReportSchedulingScreen} />
             <Tab.Screen name='Contacts' component={ContactsScreen} />
             <Tab.Screen name='Perfil' component={PerfilScreen} />
+            <Tab.Screen name='Register' component={RegisterScreen} options={{ tabBarButton: () => null}} />
             <Tab.Screen name='ContactsDetail' component={ContactsDetailScreen} options={{ tabBarButton: () => null}} />
             <Tab.Screen name='AddTeacher' component={AddTeacherScreen} options={{ tabBarButton: () => null}} />
             <Tab.Screen name='AddSchedule' component={SchedulingScreen} options={{ tabBarButton: () => null}} />
@@ -72,6 +75,9 @@ export const Routes = () => {
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name='Login' component={LoginScreen} />
                 <Stack.Screen name='Home' component={BottomRoute} />
+                <Stack.Screen name='Register' component={RegisterScreen}/>
+                <Stack.Screen name='Verify' component={VerifyScreen}/>
+                <Stack.Screen name='ChangePassword' component={ChangePasswordScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
