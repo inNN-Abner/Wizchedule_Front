@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { LoginScreen, HomeScreen, RegisterScreen, ReportSchedulingScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddTeacherScreen, SummaryScheduleScreen } from '../screens'
+import { LoginScreen, HomeScreen, RegisterScreen, ReportSchedulingScreen, SchedulingScreen, ContactsScreen, PerfilScreen, ContactsDetailScreen, AddTimeTeacherScreen, SummaryScheduleScreen } from '../screens'
 import { VerifyScreen } from '../screens/VerifyEmailScreen'
 import { ChangePasswordScreen } from '../screens/ChangePasswordScreen'
 
@@ -60,7 +60,7 @@ const BottomRoute = () => {
             <Tab.Screen name='Perfil' component={PerfilScreen} />
             <Tab.Screen name='Register' component={RegisterScreen} options={{ tabBarButton: () => null}} />
             <Tab.Screen name='ContactsDetail' component={ContactsDetailScreen} options={{ tabBarButton: () => null}} />
-            <Tab.Screen name='AddTeacher' component={AddTeacherScreen} options={{ tabBarButton: () => null}} />
+            <Tab.Screen name='AddTimeTeacher' component={AddTimeTeacherScreen} options={{ tabBarButton: () => null}} />
             <Tab.Screen name='AddSchedule' component={SchedulingScreen} options={{ tabBarButton: () => null}} />
             <Tab.Screen name='SummarySchedule' component={SummaryScheduleScreen} options={{ tabBarButton: () => null}} />
         </Tab.Navigator>

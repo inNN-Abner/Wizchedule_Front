@@ -34,3 +34,6 @@ yarn-error.*
 
 # caches
 *.idea/
+
+#vscode
+.vscode

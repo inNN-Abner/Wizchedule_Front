@@ -46,7 +46,7 @@ export const SchedulingScreen = ({ navigation }) => {
 
       <HeaderPage />
         <GenericText ftype='pageTitle' color='lightGray' ftSz='30' mgtop='30' mgleft='18'>Calendário</GenericText>
-        <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Minhas aulas agendadas</GenericText>
+        <GenericText ftype='pageSubtitle' color='lightGray' ftSz='20' mgtop='5' mgleft='18'>Novo agendamento de aula</GenericText>
 
         <SubContainer maxhgt='28' justify='flex-start' mgleft='0'>
 

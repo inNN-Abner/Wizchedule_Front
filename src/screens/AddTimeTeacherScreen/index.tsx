@@ -2,7 +2,7 @@ import { Keyboard, TouchableWithoutFeedback } from 'react-native'
 import { GenericText, Container, HeaderPage, SelectDayRow, SubContainer, DefineTime, DefineModality, StylezedButton, Windows } from '../../components'
 import { ContactInfoText } from '../../components/atoms/Text/styles'
 
-export const AddTeacherScreen = ({ navigation }) => {
+export const AddTimeTeacherScreen = ({ navigation }) => {
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>

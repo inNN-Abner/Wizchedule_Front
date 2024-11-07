@@ -21,7 +21,7 @@ export const PerfilGrid = ({ navigation }) => {
                     <Text style={{ fontWeight: 'bold' }}>{item.modalidade}</Text> {`\n`} {item.horario}</PerfilGridSkeleton>
 
                 <EditButton onPress={() => {
-                    navigation.navigate('AddTeacher', {
+                    navigation.navigate('AddTimeTeacher', {
                         id: item.id,
                         diaSemana: item.diaSemana,
                         horario: item.horario,
@@ -69,7 +69,7 @@ export const PerfilGrid = ({ navigation }) => {
             mgleft='5'
             bg='darkRed'
             onPress={() => {
-                navigation.navigate('AddTeacher')
+                navigation.navigate('AddTimeTeacher')
             }} />
         </ListContainer>
     </> 
