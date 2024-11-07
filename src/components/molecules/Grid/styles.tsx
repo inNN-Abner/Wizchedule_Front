@@ -1,8 +1,9 @@
 import styled from 'styled-components/native'
 
 export const Grid = styled.Text
-<{ mgleft?: string; ftSz?: string; ftype?: string; color?: string; bg?: string; wdt?: string; hgt?: string; mgtop?: string; dir?: string; bdrd?: string }>`
-  textAlign: center;
+<{ align?: string; pdd?: string; mgleft?: string; ftSz?: string; ftype?: string; color?: string; bg?: string; wdt?: string; hgt?: string; mgtop?: string; dir?: string; bdrd?: string }>`
+  textAlign: ${({ align }) => align || 'center'};
+  padding: ${({ pdd, theme }) => theme.metrics.px([pdd || 0])}px;
   textAlignVertical: center;
   border-radius: ${({ bdrd, theme }) => theme.metrics.px([bdrd || 5])}px;
   marginTop: ${({ mgtop, theme }) => theme.metrics.px([mgtop || 5])}px;  

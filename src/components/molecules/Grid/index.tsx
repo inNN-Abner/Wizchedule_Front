@@ -12,9 +12,11 @@ interface GridProps {
     ftype?: string
     mgleft?: string
     ftSz?: string
+    align?: string
+    pdd?: string
 }
 
-export const PerfilGridSkeleton = ({ ftSz, mgleft, color, ftype, bg, mgtop, wdt, hgt, bdrd, children }: GridProps) => {
+export const PerfilGridSkeleton = ({ align, ftSz, mgleft, color, ftype, bg, mgtop, wdt, hgt, bdrd, children, pdd }: GridProps) => {
     return (
         <Grid
             mgtop={mgtop}
@@ -26,6 +28,8 @@ export const PerfilGridSkeleton = ({ ftSz, mgleft, color, ftype, bg, mgtop, wdt,
             ftype={ftype}
             ftSz={ftSz}
             mgleft={mgleft}
+            align={align}
+            pdd={pdd}
         >{children}</Grid>
     )
 }

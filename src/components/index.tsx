@@ -27,3 +27,6 @@ export * from './organism/CalendarModal'
 
 //Exportar tudo que está dentro de 'SummarySchedule'
 export * from './organism/SummarySchedule'
+
+//Exportar tudo que está dentro de 'HomeGrid'
+export * from './organism/HomeGrid'
