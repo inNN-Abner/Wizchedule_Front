@@ -33,7 +33,7 @@ export const ListOfContacts: React.FC<{ navigation: any; list: any[] }> = ({ nav
                         bg='white'
                         justify='center'
                         hgt='48'
-                        wdt='250'
+                        wdt='240'
                         >
                             <ContactName
                             color='darkBlue'

@@ -17,7 +17,7 @@ export const AddTimeTeacherScreen = ({ navigation }) => {
         <SubContainer align='center' mgleft='0'>
 
             <Windows
-              wdt='85%'
+              wdt='319'
               hgt='50'
               bdrdBL='0'
               bdrdBR='0'

@@ -62,7 +62,7 @@ export const SummarySchedule = ({ navigation }) => {
                 />
 
                 <SubtitleText mgtop='0' mgleft='-70' color='white' ftWgt='normal' ftSz='20' >
-                    11h30 às 12h30
+                    12/11/2024
                 </SubtitleText>
             </SubContainer>
 

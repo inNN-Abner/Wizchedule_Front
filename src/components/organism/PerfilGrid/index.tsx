@@ -11,13 +11,13 @@ export const PerfilGrid = ({ navigation }) => {
 
             <ListContainer
                 mgtop='-3'
-                mgleft='0'
+                mgleft='00'
                 bg='darkGrayII'
                 dir='row'
             >
 
-                <PerfilGridSkeleton ftSz='12' color='white'>{item.diaSemana}</PerfilGridSkeleton>
-                <PerfilGridSkeleton ftSz='14' wdt='140' ftype='regular'>
+                <PerfilGridSkeleton ftSz='11' color='white'>{item.diaSemana}</PerfilGridSkeleton>
+                <PerfilGridSkeleton ftSz='14' wdt='130' ftype='regular'>
                     <Text style={{ fontWeight: 'bold' }}>{item.modalidade}</Text> {`\n`} {item.horario}</PerfilGridSkeleton>
 
                 <EditButton onPress={() => {

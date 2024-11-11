@@ -8,11 +8,17 @@ import { ContactInfoText } from '../../atoms/Text/styles'
 
 export const HomeGrid = () => {
     return (
-    <SubContainer hgt='243' wdt='330' align='center' mgtop='15' mgleft='0' bg='white'>
+    <SubContainer 
+        hgt='260'
+        wdt='360'
+        align='center'
+        mgtop='10'
+        mgleft='0'
+        bg='white'>
     <Windows 
           bg='darkRed'
           hgt='50'
-          wdt='340'
+          wdt='355'
           bdrdBL='0'
           bdrdBR='0'
           justify='flex-start'
@@ -33,9 +39,9 @@ export const HomeGrid = () => {
                 mgtop='-5'
                 bdrdTL='0'
                 bdrdTR='0'
-                wdt='340'
-                hgt='200'
-                bg='darkGrayII'
+                wdt='355'
+                hgt='205'
+                bg='darkBlue'
             >
                 <FlatList data={ informacoes } renderItem={({ item }) => (
 
@@ -46,14 +52,14 @@ export const HomeGrid = () => {
                             dir='column'
                             align='center'
                             justify='flex-start'
-                            wdt='320'
-                            hgt='185'
+                            wdt='350'
+                            hgt='200'
                         >
 
                             <PerfilGridSkeleton 
                                 pdd='10'
                                 align='flex-start'
-                                wdt='320'
+                                wdt='335'
                                 mgleft='0' 
                                 ftSz='15'
                                 mgtop='10'
@@ -64,14 +70,15 @@ export const HomeGrid = () => {
 
                             <PerfilGridSkeleton 
                                 ftSz='14'
-                                wdt='320'
+                                wdt='335'
                                 mgtop='7'
                                 mgleft='0'
-                                hgt='120'
+                                hgt='110'
                                 bdrd='10'
                                 align='flex-start'
                                 pdd='10'
-                                ftype='pageSubtitle'>
+                                ftype='pageSubtitle'
+                                txtalign='flex-start'>
                                 {item.texto}</PerfilGridSkeleton>
 
                         </ListContainer>
@@ -85,11 +92,17 @@ export const HomeGrid = () => {
 
 export const ClassGrid = () => {
     return (
-    <SubContainer hgt='243' wdt='330' align='center' mgtop='15' mgleft='0' bg='white'>
+    <SubContainer 
+        hgt='265'
+        wdt='360'
+        align='center'
+        mgtop='5'
+        mgleft='0'
+        bg='white'>
     <Windows 
           bg='darkRed'
           hgt='50'
-          wdt='340'
+          wdt='355'
           bdrdBL='0'
           bdrdBR='0'
           justify='flex-start'
@@ -110,8 +123,8 @@ export const ClassGrid = () => {
                 mgtop='-5'
                 bdrdTL='0'
                 bdrdTR='0'
-                wdt='340'
-                hgt='200'
+                wdt='355'
+                hgt='210'
                 bg='darkGrayII'
             >
                 <FlatList data={ aulasDisponiveis } renderItem={({ item }) => (
@@ -123,21 +136,22 @@ export const ClassGrid = () => {
                             dir='row'
                             align='center'
                             justify='flex-start'
-                            wdt='155'
-                            hgt='62'
+                            wdt='160'
+                            hgt='65'
                         >
                     
-                        <SubContainer dir='row' bg='white' wdt='145' hgt='55' align='center' bdrd='10' mgleft='5' mgtop='10'>
+                        <SubContainer dir='row' bg='white' wdt='175' hgt='55' align='center' bdrd='10' mgleft='5' mgtop='10'>
                             <ContactPhoto
-                            hgt='40'
-                            mgleft='5'
+                            hgt='35'
+                            wdt='40'
+                            mgleft='3'
                             source={item.photo}/>
 
                             <PerfilGridSkeleton 
                                 pdd='5'
                                 align='flex-start'
-                                wdt='90'
-                                hgt='57'
+                                wdt='125'
+                                hgt='50'
                                 mgleft='0' 
                                 ftSz='14'
                                 mgtop='0'
@@ -160,7 +174,7 @@ export const ClassGrid = () => {
                             
                             <PerfilGridSkeleton 
                                 ftSz='14'
-                                wdt='130'
+                                wdt='115'
                                 hgt='55'
                                 mgtop='0'
                                 mgleft='0'

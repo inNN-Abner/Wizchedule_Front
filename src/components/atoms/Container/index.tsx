@@ -7,7 +7,7 @@ export const Container = styled.SafeAreaView
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'}; 
     justify-content: ${({ justify }) => justify || 'flex-start'};
-    background-color: ${({ bg, theme }) => theme.colors[bg || 'darkBlue']};
+    background-color: ${({ theme, }) => theme.colors[bg || 'darkBlue']};
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '100%')};
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '100%')};
 `
@@ -16,11 +16,11 @@ export const SubContainer = styled.SafeAreaView
     <{ mgleft?: string; mgtop?: string; bdrd?: string; dir?: string; wrap?: string; align?: string; justify?: string; bg?: string; wdt?: string; hgt?: string; maxhgt?: string }>`
     display: flex;
     flexWrap: ${({ wrap }) => wrap || 'nowrap'};
-    border-radius: ${({ bdrd, theme }) => theme.metrics.px([bdrd || 20])}px;
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'};
     justify-content: ${({ justify }) => justify || 'flex-start'};
     background-color: ${({ bg, theme }) => theme.colors[bg || 'darkBlue']};
+    border-radius: ${({ bdrd, theme }) => theme.metrics.px([bdrd || 20])}px;   
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '100%')};
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '100%')};
     max-height: ${({ maxhgt }) => (maxhgt ? `${(maxhgt)}%` : '100%')};
