@@ -7,7 +7,7 @@ export const Container = styled.SafeAreaView
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'}; 
     justify-content: ${({ justify }) => justify || 'flex-start'};
-    background-color: ${({ theme, }) => theme.colors[bg || 'darkBlue']};
+    background-color: ${({ theme, bg }) => theme.colors[bg || 'darkBlue']};
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '100%')};
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '100%')};
 `
