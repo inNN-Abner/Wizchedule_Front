@@ -39,7 +39,7 @@ export const VerifyScreen = ({ navigation }) => {
 
       <Container align='center'>
 
-        {/* <Logo source={Wizard} /> */}
+        {<Logo source={Wizard} />}
         <GenericText>WiZcHeduLe</GenericText>
 
         <SubContainer align='center'>

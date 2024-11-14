@@ -6,6 +6,8 @@ export const WhiteHeaderContainer = styled.View
     align-items: center; 
     margin-top: 15px;
     border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     margin-right: auto;
     flex-direction: ${({ dir }) => dir || 'row'};
     justify-content: ${({ justify }) => justify || 'space-between'};
