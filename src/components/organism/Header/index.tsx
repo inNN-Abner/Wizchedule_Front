@@ -1,10 +1,10 @@
 import React from 'react'
-import { WhiteHeaderContainer } from './styles'
 import { Logo } from '../../atoms/Logo'
-import { PersonalIcon } from '../../atoms/PersonalIcon'
-import { HeaderTexts } from '../../atoms/Text'
 import Wizard from '../../../../assets/Icon_1.png'
 import WhiteWizard from '../../../../assets/Logo_Wizchedule_branco.png'
+import { PersonalIcon } from '../../atoms/PersonalIcon'
+import { WhiteHeaderContainer } from './styles'
+import { HeaderTexts } from '../../atoms/Text'
 
 interface HeaderProps {
     bg?: string
@@ -15,7 +15,7 @@ interface HeaderProps {
 export const Headers = ({ bg, wdt, hgt }: HeaderProps) => {
     return (
         <WhiteHeaderContainer
-        bg={bg}
+        bg={'white'}
         wdt={wdt}
         hgt={hgt}
         >
@@ -27,12 +27,12 @@ export const Headers = ({ bg, wdt, hgt }: HeaderProps) => {
 
             <WhiteHeaderContainer
                 bg={'white'}
-                wdt={'100'}
+                wdt={'235'}
                 hgt={'20'}
                 dir={'column'}
             >
-                <HeaderTexts ftSz='14' ftWgt='bold' mgtop='-8' alignSelf='flex-start'>Henrique Oleiro</HeaderTexts>
-                <HeaderTexts ftSz='10' mgtop='0' alignSelf='flex-start' >Wizard - Nível 7</HeaderTexts>
+                <HeaderTexts ftSz='15' ftWgt='bold' mgtop='-8' alignSelf='flex-start'>Henrique Oleiro</HeaderTexts>
+                <HeaderTexts ftSz='12' mgtop='0' alignSelf='flex-start' >Wizard - Nível 7</HeaderTexts>
             </WhiteHeaderContainer>
             
             <Logo

@@ -1,4 +1,3 @@
-import logoWizchedule from '../../../../assets/Logo_Wizchedule.png'
 import { LogoImage } from './styles'
 
 interface LogoProps {
@@ -6,15 +5,19 @@ interface LogoProps {
     wdt?: string
     hgt?: string
     mgTop?: string
+    mgleft?: string
     jstCont?: string
 }
 
-export const Logo = ({ source, wdt, hgt, mgTop, jstCont }: LogoProps) => {
+export const Logo = ({ source, wdt, hgt, mgTop, mgleft, jstCont }: LogoProps) => {
     return (
-        <LogoImage source={source}
+        <LogoImage 
+        source={source}
         wdt={wdt}
         hgt={hgt}
         mgTop={mgTop}
-        jstCont={jstCont}/>
+        mgleft={mgleft}
+        jstCont={jstCont}
+        />
     )
 }

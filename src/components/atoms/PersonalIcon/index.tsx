@@ -5,14 +5,18 @@ interface PSProps{
     source: ImageSourcePropType
     wdt?: string
     hgt?: string
+    mgtop?: string
+    mgleft?: string
 }
 
-export const PersonalIcon = ({ source, wdt, hgt }: PSProps) => {
+export const PersonalIcon = ({ source, wdt, hgt, mgtop, mgleft }: PSProps) => {
     return (
         <PSIcon 
             source={source} 
             wdt={wdt}
             hgt={hgt}
+            mgtop={mgtop}
+            mgleft={mgleft}
             />
     )
 }

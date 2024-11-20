@@ -7,6 +7,8 @@ export const HeaderContainer = styled.View
     align-items: center; 
     justify-content: space-around;
     border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     background-color: ${({ bg, theme }) => theme.colors[bg || 'white']};
     width: ${({ theme, wdt }) => (wdt ? `${theme.metrics.px(wdt)}px` : '100%')};
     height: ${({ theme, hgt }) => (hgt ? `${theme.metrics.px(hgt)}px` : '10%')};
