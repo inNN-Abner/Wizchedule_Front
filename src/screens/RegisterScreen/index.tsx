@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Wizard from '../../../assets/Logo_Wizchedule.png'
 import { Keyboard, TouchableWithoutFeedback } from 'react-native'
-import { GenericText, NameInput, PasswordInput, SubtitleText, StylezedButton, Container, SubContainer, EmailInput, SignupError, DropdownComponent } from '../../components'
+import { GenericText, NameInput, PasswordInput, SubtitleText, StylezedButton, Container, SubContainer, EmailInput, SignupError, DropdownComponent, Logo } from '../../components'
 import { API_URL } from '../../config/constants'
 import * as SecureStore from 'expo-secure-store'
 
@@ -39,12 +39,12 @@ export const RegisterScreen = ({ navigation }) => {
 
       <Container align='center'>
 
-        {/* <Logo source={Wizard} /> */}
+        <Logo source={Wizard} />
         <GenericText>WiZcHeduLe</GenericText>
 
         <SubContainer align='center'>
 
-        <SubtitleText mgtop='15' alignSelf='flex-start' >Nome</SubtitleText>
+        <SubtitleText mgtop='5' alignSelf='flex-start' >Nome</SubtitleText>
             <NameInput
               placeholder=''
               color='darkBlue'
@@ -54,7 +54,7 @@ export const RegisterScreen = ({ navigation }) => {
               onChangeText={(text) => setNomeValue(text)}
             />
 
-          <SubtitleText mgtop='20' alignSelf='flex-start' >E-mail</SubtitleText>
+          <SubtitleText mgtop='5' alignSelf='flex-start' >E-mail</SubtitleText>
             <EmailInput
               placeholder=''
               color='darkBlue'
@@ -64,7 +64,7 @@ export const RegisterScreen = ({ navigation }) => {
               onChangeText={(text) => setEmailValue(text)}
             />
 
-          <SubtitleText mgtop='20' alignSelf='flex-start' >Senha</SubtitleText>
+          <SubtitleText mgtop='5' alignSelf='flex-start' >Senha</SubtitleText>
             <PasswordInput
               placeholder=''
               mgtop='5'
@@ -75,14 +75,14 @@ export const RegisterScreen = ({ navigation }) => {
               onChangeText={(text) => setPasswordValue(text)}
             />
           
-          <SubtitleText mgtop='20' alignSelf='flex-start' >Tipo</SubtitleText>
-            <DropdownComponent value={tipoValue} onChangeValue={setTipoValue}/>
+          <SubtitleText mgtop='5' alignSelf='flex-start'>Tipo</SubtitleText>
+            <DropdownComponent value={tipoValue}  onChangeValue={setTipoValue}/>
 
           <SubContainer align='center'>
 
             {errorMessage ? <SignupError>{errorMessage}</SignupError> : null}
             
-            <StylezedButton label='CADASTRAR' color='white' mgtop='10'         
+            <StylezedButton label='CADASTRAR' color='white' mgtop='5'         
             onPress={handleSignup}/>
             
             {/* <StylezedButton label='CADASTRAR' bg='white' color='darkRed' mgtop='10'/> */}
